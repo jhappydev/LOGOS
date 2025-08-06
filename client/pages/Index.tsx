@@ -125,7 +125,7 @@ export default function Index() {
               <div className="text-center">
                 <Link
                   to="/team"
-                  className="inline-block bg-blue-700 text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold hover:bg-blue-800 transition-colors"
+                  className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors"
                 >
                   구성원 소개
                 </Link>
@@ -153,7 +153,7 @@ export default function Index() {
                 key={index}
                 className="bg-white p-4 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow group"
               >
-                <div className="h-1.5 md:h-2 w-8 md:w-12 bg-blue-700 mb-4 md:mb-6 group-hover:w-12 md:group-hover:w-16 transition-all duration-300"></div>
+                <div className="h-1.5 md:h-2 w-8 md:w-12 bg-[#7BB0E3] mb-4 md:mb-6 group-hover:w-12 md:group-hover:w-16 transition-all duration-300"></div>
                 <h4 className="text-sm md:text-lg font-semibold text-gray-800 mb-3 md:mb-4">
                   {service}
                 </h4>
@@ -167,7 +167,7 @@ export default function Index() {
           <div className="text-center mt-10 md:mt-16">
             <Link
               to="/services"
-              className="inline-block bg-blue-700 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-blue-800 transition-colors"
+              className="inline-block bg-[#7BB0E3] text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors"
             >
               더세 업무 보기
             </Link>
@@ -176,7 +176,7 @@ export default function Index() {
       </section>
 
       {/* Frame 5: Contact Section */}
-      <section className="py-16 md:py-28 bg-gradient-to-br from-blue-50 to-indigo-50 border-t border-blue-100">
+      <section className="py-16 md:py-28 bg-gradient-to-br from-[#7BB0E3]/10 to-[#7BB0E3]/20 border-t border-[#7BB0E3]/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-8">
@@ -186,16 +186,16 @@ export default function Index() {
               세무 관련 문의사항이 있으시면 언제든지 연락해 주세요.
             </p>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-              <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-blue-100">
+              <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-[#7BB0E3]/30">
                 <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
                   전화 상담
                 </h4>
-                <p className="text-xl md:text-2xl font-bold text-blue-700 mb-2">
+                <p className="text-xl md:text-2xl font-bold text-[#7BB0E3] mb-2">
                   02-563-2505
                 </p>
                 <p className="text-sm md:text-base text-gray-600">평일 9:00 - 18:00</p>
               </div>
-              <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-blue-100">
+              <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-[#7BB0E3]/30">
                 <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
                   방문 상담
                 </h4>
@@ -204,7 +204,7 @@ export default function Index() {
                 </p>
                 <Link
                   to="/directions"
-                  className="text-sm md:text-base text-blue-700 hover:text-blue-800 font-semibold"
+                  className="text-sm md:text-base text-[#7BB0E3] hover:text-[#5A9BD4] font-semibold"
                 >
                   오시는 길 보기 →
                 </Link>
