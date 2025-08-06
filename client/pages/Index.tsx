@@ -15,7 +15,7 @@ export default function Index() {
   ];
 
   return (
-    <Layout heroTitle="세무법인 로고스 강남지점" isHomepage={true}>
+    <Layout heroTitle="세무법인 로��스 강남지점" isHomepage={true}>
       {/* Frame 2: About Section with Circles */}
       <section className="py-24 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
@@ -29,7 +29,7 @@ export default function Index() {
                   : "opacity-0 translate-y-12"
               }`}
             >
-              <div className="flex items-center space-x-4 md:space-x-8 lg:space-x-16">
+              <div className="flex items-center space-x-2 md:space-x-6 lg:space-x-16">
                 {/* 최선 Circle */}
                 <div
                   className={`flex flex-col items-center transition-all duration-1000 ease-out ${
@@ -39,8 +39,8 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "200ms" }}
                 >
-                  <div className="w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-blue-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-sm md:text-lg lg:text-2xl">
+                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-blue-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-xs md:text-sm lg:text-2xl">
                       최선
                     </span>
                   </div>
@@ -48,7 +48,7 @@ export default function Index() {
 
                 {/* Connecting Line */}
                 <div
-                  className={`w-8 md:w-12 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${
+                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${
                     keywordsVisible
                       ? "opacity-100 scale-x-100"
                       : "opacity-0 scale-x-0"
@@ -65,8 +65,8 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "600ms" }}
                 >
-                  <div className="w-28 h-28 lg:w-32 lg:h-32 bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-xl lg:text-2xl">
+                  <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-xs md:text-base lg:text-2xl">
                       최적
                     </span>
                   </div>
@@ -74,7 +74,7 @@ export default function Index() {
 
                 {/* Connecting Line */}
                 <div
-                  className={`w-8 md:w-12 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${
+                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${
                     keywordsVisible
                       ? "opacity-100 scale-x-100"
                       : "opacity-0 scale-x-0"
@@ -91,8 +91,8 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "1000ms" }}
                 >
-                  <div className="w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-blue-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-sm md:text-lg lg:text-2xl">
+                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-blue-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-xs md:text-sm lg:text-2xl">
                       최상
                     </span>
                   </div>
