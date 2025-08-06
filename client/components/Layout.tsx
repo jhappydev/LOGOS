@@ -25,16 +25,18 @@ export default function Layout({
       setIsScrolled(scrollPosition > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <div className="min-h-screen bg-white pb-16 lg:pb-0">
       {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-      }`}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
+      >
         <div className="container mx-auto px-4 py-3 md:py-6 flex items-center justify-between mb-30">
           {/* Mobile Menu Button - Left */}
           <button
@@ -42,9 +44,13 @@ export default function Layout({
             className="lg:hidden bg-transparent p-2 md:p-3 rounded order-1"
           >
             {isMenuOpen ? (
-              <X className={`w-5 h-5 ${isScrolled ? 'text-[#345A9E]' : 'text-white'}`} />
+              <X
+                className={`w-5 h-5 ${isScrolled ? "text-[#345A9E]" : "text-white"}`}
+              />
             ) : (
-              <Menu className={`w-5 h-5 ${isScrolled ? 'text-[#345A9E]' : 'text-white'}`} />
+              <Menu
+                className={`w-5 h-5 ${isScrolled ? "text-[#345A9E]" : "text-white"}`}
+              />
             )}
           </button>
 
@@ -58,9 +64,11 @@ export default function Layout({
               alt="세무법인 로고스 로고"
               className="w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain"
             />
-            <span className={`ml-3 text-lg md:text-xl lg:text-2xl font-bold ${
-              isScrolled ? 'text-[#345A9E]' : 'text-white'
-            }`}>
+            <span
+              className={`ml-3 text-lg md:text-xl lg:text-2xl font-bold ${
+                isScrolled ? "text-[#345A9E]" : "text-white"
+              }`}
+            >
               세무법인 로고스
             </span>
           </Link>
@@ -71,8 +79,8 @@ export default function Layout({
               to="/greeting"
               className={`font-semibold transition-colors ${
                 isScrolled
-                  ? 'text-[#345A9E] hover:text-[#7BB0E3]'
-                  : 'text-white hover:text-blue-200'
+                  ? "text-[#345A9E] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
               }`}
             >
               인사말
@@ -81,8 +89,8 @@ export default function Layout({
               to="/team"
               className={`font-semibold transition-colors ${
                 isScrolled
-                  ? 'text-[#345A9E] hover:text-[#7BB0E3]'
-                  : 'text-white hover:text-blue-200'
+                  ? "text-[#345A9E] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
               }`}
             >
               구성원 소개
@@ -91,8 +99,8 @@ export default function Layout({
               to="/services"
               className={`font-semibold transition-colors ${
                 isScrolled
-                  ? 'text-[#345A9E] hover:text-[#7BB0E3]'
-                  : 'text-white hover:text-blue-200'
+                  ? "text-[#345A9E] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
               }`}
             >
               담당 업무
@@ -101,8 +109,8 @@ export default function Layout({
               to="/directions"
               className={`font-semibold transition-colors ${
                 isScrolled
-                  ? 'text-[#345A9E] hover:text-[#7BB0E3]'
-                  : 'text-white hover:text-blue-200'
+                  ? "text-[#345A9E] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
               }`}
             >
               오시는 길
@@ -131,10 +139,7 @@ export default function Layout({
                   세무법인 로고스
                 </span>
               </div>
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="p-1"
-              >
+              <button onClick={() => setIsMenuOpen(false)} className="p-1">
                 <X className="w-5 h-5 text-[#345A9E]" />
               </button>
             </div>
@@ -239,8 +244,12 @@ export default function Layout({
             </h4>
             <p className="text-sm md:text-base">대표: 윤영호</p>
             <p className="text-sm md:text-base">사업자등록번호: 445-85-02834</p>
-            <p className="text-sm md:text-base">전화번호: 02-563-2505 / FAX 02-563-2506</p>
-            <p className="text-sm md:text-base">주소: 서울특별시 강남구 테헤란로20길 18 (부봉빌딩) 4층</p>
+            <p className="text-sm md:text-base">
+              전화번호: 02-563-2505 / FAX 02-563-2506
+            </p>
+            <p className="text-sm md:text-base">
+              주소: 서울특별시 강남구 테헤란로20길 18 (부봉빌딩) 4층
+            </p>
             <p className="text-sm md:text-base">이메일: logostax25@naver.com</p>
           </div>
         </div>

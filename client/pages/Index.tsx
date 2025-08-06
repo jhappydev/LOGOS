@@ -194,7 +194,9 @@ export default function Index() {
                 <p className="text-xl md:text-2xl font-bold text-[#7BB0E3] mb-2">
                   02-563-2505
                 </p>
-                <p className="text-sm md:text-base text-gray-600">평일 9:00 - 18:00</p>
+                <p className="text-sm md:text-base text-gray-600">
+                  평일 9:00 - 18:00
+                </p>
               </div>
               <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-[#7BB0E3]/30">
                 <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
