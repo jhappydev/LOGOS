@@ -1,4 +1,4 @@
-import { useState, ReactNode } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import FloatingButtons from "./FloatingButtons";
@@ -17,59 +17,93 @@ export default function Layout({
   isHomepage = false,
 }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsScrolled(scrollPosition > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white pb-16 lg:pb-0">
       {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-50 bg-transparent">
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+      }`}>
         <div className="container mx-auto px-4 py-3 md:py-6 flex items-center justify-between mb-30">
           {/* Mobile Menu Button - Left */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden bg-blue-700 p-2 md:p-3 rounded order-1"
+            className="lg:hidden bg-transparent p-2 md:p-3 rounded order-1"
           >
             {isMenuOpen ? (
-              <X className="w-4 h-4 md:w-6 md:h-6 text-white" />
+              <X className={`w-5 h-5 ${isScrolled ? 'text-[#345A9E]' : 'text-white'}`} />
             ) : (
-              <Menu className="w-4 h-4 md:w-6 md:h-6 text-white" />
+              <Menu className={`w-5 h-5 ${isScrolled ? 'text-[#345A9E]' : 'text-white'}`} />
             )}
           </button>
 
           {/* Logo - Center on mobile, Left on desktop */}
           <Link
             to="/"
-            className="flex items-center text-white font-medium order-2 lg:order-1 lg:pl-3 lg:mr-27"
+            className="flex items-center font-medium order-2 lg:order-1 lg:pl-3 lg:mr-27"
           >
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2Fd94a560c34c543b2b75ed46d8b28bbee%2Fb284b4dc36024ca385a83cf5ab8a5bd2"
+              src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fbd7e46ec552e468eb7f2baae362b2c49?format=webp&width=800"
               alt="세무법인 로고스 로고"
               className="w-24 h-9 md:w-32 md:h-12 lg:w-40 lg:h-15 object-contain"
             />
+            <span className={`ml-3 text-lg md:text-xl lg:text-2xl font-bold ${
+              isScrolled ? 'text-[#345A9E]' : 'text-white'
+            }`}>
+              세무법인 로고스
+            </span>
           </Link>
 
           {/* Desktop Navigation Menu */}
           <nav className="hidden lg:flex items-center space-x-8 order-3">
             <Link
               to="/greeting"
-              className="text-white hover:text-blue-200 transition-colors"
+              className={`transition-colors ${
+                isScrolled 
+                  ? 'text-[#345A9E] hover:text-[#7BB0E3]' 
+                  : 'text-white hover:text-blue-200'
+              }`}
             >
               인사말
             </Link>
             <Link
               to="/team"
-              className="text-white hover:text-blue-200 transition-colors"
+              className={`transition-colors ${
+                isScrolled 
+                  ? 'text-[#345A9E] hover:text-[#7BB0E3]' 
+                  : 'text-white hover:text-blue-200'
+              }`}
             >
               구성원 소개
             </Link>
             <Link
               to="/services"
-              className="text-white hover:text-blue-200 transition-colors"
+              className={`transition-colors ${
+                isScrolled 
+                  ? 'text-[#345A9E] hover:text-[#7BB0E3]' 
+                  : 'text-white hover:text-blue-200'
+              }`}
             >
               담당 업무
             </Link>
             <Link
               to="/directions"
-              className="text-white hover:text-blue-200 transition-colors"
+              className={`transition-colors ${
+                isScrolled 
+                  ? 'text-[#345A9E] hover:text-[#7BB0E3]' 
+                  : 'text-white hover:text-blue-200'
+              }`}
             >
               오시는 길
             </Link>
@@ -87,16 +121,21 @@ export default function Layout({
         >
           <div className="p-4 border-b">
             <div className="flex items-center justify-between">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fd94a560c34c543b2b75ed46d8b28bbee%2Fb284b4dc36024ca385a83cf5ab8a5bd2"
-                alt="세무법인 로고스 로고"
-                className="w-20 h-8 object-contain"
-              />
+              <div className="flex items-center">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fc1a19d4d408c48e5a67fbd0c73679a92?format=webp&width=800"
+                  alt="세무법인 로고스 로고"
+                  className="w-16 h-6 object-contain"
+                />
+                <span className="ml-2 text-sm font-bold text-[#345A9E]">
+                  세무법인 로고스
+                </span>
+              </div>
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-1"
               >
-                <X className="w-5 h-5 text-gray-600" />
+                <X className="w-5 h-5 text-[#345A9E]" />
               </button>
             </div>
           </div>
@@ -105,7 +144,7 @@ export default function Layout({
               <li>
                 <Link
                   to="/greeting"
-                  className="block text-base text-gray-700 hover:text-blue-400 transition-colors py-2"
+                  className="block text-base text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   인사말
@@ -114,7 +153,7 @@ export default function Layout({
               <li>
                 <Link
                   to="/team"
-                  className="block text-base text-gray-700 hover:text-blue-400 transition-colors py-2"
+                  className="block text-base text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   구성원 소개
@@ -123,7 +162,7 @@ export default function Layout({
               <li>
                 <Link
                   to="/services"
-                  className="block text-base text-gray-700 hover:text-blue-400 transition-colors py-2"
+                  className="block text-base text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   담당 업무
@@ -132,7 +171,7 @@ export default function Layout({
               <li>
                 <Link
                   to="/directions"
-                  className="block text-base text-gray-700 hover:text-blue-400 transition-colors py-2"
+                  className="block text-base text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   오시는 길
