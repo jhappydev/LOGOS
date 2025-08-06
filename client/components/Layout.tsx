@@ -54,9 +54,9 @@ export default function Layout({
             className="flex items-center font-medium order-2 lg:order-1 lg:pl-3 lg:mr-27"
           >
             <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fbd7e46ec552e468eb7f2baae362b2c49?format=webp&width=800"
+              src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fb3b53f52231b49298967686d64413891"
               alt="세무법인 로고스 로고"
-              className="w-24 h-9 md:w-32 md:h-12 lg:w-40 lg:h-15 object-contain"
+              className="w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain"
             />
             <span className={`ml-3 text-lg md:text-xl lg:text-2xl font-bold ${
               isScrolled ? 'text-[#345A9E]' : 'text-white'
@@ -69,9 +69,9 @@ export default function Layout({
           <nav className="hidden lg:flex items-center space-x-8 order-3">
             <Link
               to="/greeting"
-              className={`transition-colors ${
-                isScrolled 
-                  ? 'text-[#345A9E] hover:text-[#7BB0E3]' 
+              className={`font-semibold transition-colors ${
+                isScrolled
+                  ? 'text-[#345A9E] hover:text-[#7BB0E3]'
                   : 'text-white hover:text-blue-200'
               }`}
             >
@@ -79,9 +79,9 @@ export default function Layout({
             </Link>
             <Link
               to="/team"
-              className={`transition-colors ${
-                isScrolled 
-                  ? 'text-[#345A9E] hover:text-[#7BB0E3]' 
+              className={`font-semibold transition-colors ${
+                isScrolled
+                  ? 'text-[#345A9E] hover:text-[#7BB0E3]'
                   : 'text-white hover:text-blue-200'
               }`}
             >
@@ -89,9 +89,9 @@ export default function Layout({
             </Link>
             <Link
               to="/services"
-              className={`transition-colors ${
-                isScrolled 
-                  ? 'text-[#345A9E] hover:text-[#7BB0E3]' 
+              className={`font-semibold transition-colors ${
+                isScrolled
+                  ? 'text-[#345A9E] hover:text-[#7BB0E3]'
                   : 'text-white hover:text-blue-200'
               }`}
             >
@@ -99,9 +99,9 @@ export default function Layout({
             </Link>
             <Link
               to="/directions"
-              className={`transition-colors ${
-                isScrolled 
-                  ? 'text-[#345A9E] hover:text-[#7BB0E3]' 
+              className={`font-semibold transition-colors ${
+                isScrolled
+                  ? 'text-[#345A9E] hover:text-[#7BB0E3]'
                   : 'text-white hover:text-blue-200'
               }`}
             >
@@ -194,7 +194,7 @@ export default function Layout({
       <section
         className={`relative ${isHomepage ? "h-screen" : "h-96"} bg-cover bg-center bg-no-repeat flex items-center`}
         style={{
-          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2Fd94a560c34c543b2b75ed46d8b28bbee%2Ff24062dbabd040be89ea5ee2b30747ea?format=webp&width=800')`,
+          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2F2c80f6ae184a4958b6c9fbd5fbe2c511')`,
         }}
       >
         {/* Gradient overlay */}
