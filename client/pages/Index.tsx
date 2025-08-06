@@ -9,7 +9,7 @@ export default function Index() {
     "세금신고업무",
     "상속, 증여, 양도 신고",
     "경정청구(환급)",
-    "조세불복",
+    "조세���복",
     "경영컨설팅",
     "세무조사 수임",
   ];
@@ -115,17 +115,18 @@ export default function Index() {
             {/* Frame with content from uploaded image */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
               <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-2 text-center">
-                전문가그룹이 고객의 상황에 맞는
+                전문가 그룹이 고객의 상황에 맞는
               </p>
-              <div className="text-center">
-                <p className="text-sm md:text-lg lg:text-xl font-bold text-indigo-700 mb-6 md:mb-8 bg-indigo-50 py-2 md:py-3 px-3 md:px-4 rounded-lg inline-block">
-                  개인별 최적화된 세무 솔루션을 제공합니다.
-                </p>
-              </div>
+              <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-6 md:mb-8 text-center">
+                <span className="text-xl md:text-2xl text-[#3C6ADD] font-bold italic">
+                  &quot;개인별 최적화된 세무 솔루션&quot;
+                </span>
+                을 제공합니다.
+              </p>
               <div className="text-center">
                 <Link
                   to="/team"
-                  className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors"
+                  className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors mt-3"
                 >
                   구성원 소개
                 </Link>
@@ -200,7 +201,7 @@ export default function Index() {
                   방문 상담
                 </h4>
                 <p className="text-sm md:text-base text-gray-700 mb-2">
-                  서울특별시 강남구 테헤란로20길 18
+                  서울특별시 강��구 테헤란로20길 18
                 </p>
                 <Link
                   to="/directions"
