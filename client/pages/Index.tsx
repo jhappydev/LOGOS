@@ -39,7 +39,7 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "200ms" }}
                 >
-                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-blue-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
                     <span className="text-white font-bold text-xs md:text-sm lg:text-2xl">
                       최선
                     </span>
@@ -65,8 +65,8 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "600ms" }}
                 >
-                  <div className="w-16 h-16 md:w-24 md:h-24 lg:w-32 lg:h-32 bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-xs md:text-base lg:text-2xl">
+                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-xs md:text-sm lg:text-2xl">
                       최적
                     </span>
                   </div>
@@ -91,7 +91,7 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "1000ms" }}
                 >
-                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-blue-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
                     <span className="text-white font-bold text-xs md:text-sm lg:text-2xl">
                       최상
                     </span>
@@ -102,7 +102,7 @@ export default function Index() {
             <p className="text-xs md:text-sm lg:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
               재산세, 법인세, 조세불복 등 복잡한 세금 문제로 고민중이신가요?
               <br />
-              이제 세무법인 로고�� 강남지점이 책임지고 해결해드리겠습니다.
+              이제 세무법인 로고스 강남지점이 책임지고 해결해드리겠습니다.
             </p>
           </div>
         </div>
