@@ -80,7 +80,7 @@ export default function Directions() {
   }, []);
 
   const handleNaverMap = () => {
-    const address = encodeURIComponent("서울특별시 강남구 테헤란로20길 18");
+    const address = encodeURIComponent("서���특별시 강남구 테헤란로20길 18");
     window.open(`https://map.naver.com/v5/search/${address}`, "_blank");
   };
 
@@ -107,7 +107,7 @@ export default function Directions() {
                 <div className="bg-blue-50 p-6 rounded-lg mb-6">
                   <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
                     <Train className="w-5 h-5 mr-2 text-blue-600" />
-                    지하철 이용 ��내
+                    지하철 이용 안내
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-2">
                     <strong>역삼역 3번 출구</strong>에서 직진
