@@ -210,15 +210,17 @@ export default function Layout({
         <div className="container mx-auto px-4 relative z-10">
           <div className={`${isHomepage ? "max-w-3xl" : "text-center"}`}>
             <h1
-              className={`font-bold text-white mb-4 md:mb-6 leading-tight ${isHomepage ? "text-2xl md:text-4xl lg:text-6xl" : "text-xl md:text-3xl lg:text-4xl"}`}
+              className={`font-bold text-white mb-4 md:mb-6 leading-tight text-center ${isHomepage ? "text-3xl md:text-4xl lg:text-6xl" : "text-2xl md:text-3xl lg:text-4xl"}`}
             >
               {heroTitle}
             </h1>
             {isHomepage && (
-              <div className="text-white/90 text-base md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8">
-                "맞춤 상담, 사후관리까지 책임지는
+              <div className="text-white/90 text-xl md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8 text-center flex flex-row flex-wrap pl-8">
+                <span className="mr-auto">
+                  "맞춤 상담, 사후관리까지 책임지는
+                </span>
                 <br />
-                믿을 수 있는 세무 동반자"
+                <span>&nbsp;믿을 수 있는 세무 동반자"</span>
               </div>
             )}
           </div>
