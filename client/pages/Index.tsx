@@ -39,8 +39,9 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "200ms" }}
                 >
-                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-base md:text-sm lg:text-2xl">
+                  <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    {/* 글자 크기 키움 */}
+                    <span className="text-white font-bold text-lg md:text-xl lg:text-3xl">
                       최선
                     </span>
                   </div>
@@ -65,8 +66,8 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "600ms" }}
                 >
-                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-base md:text-sm lg:text-2xl">
+                  <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-lg md:text-xl lg:text-3xl">
                       최적
                     </span>
                   </div>
@@ -91,8 +92,8 @@ export default function Index() {
                   }`}
                   style={{ transitionDelay: "1000ms" }}
                 >
-                  <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-base md:text-sm lg:text-2xl">
+                  <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-lg md:text-xl lg:text-3xl">
                       최상
                     </span>
                   </div>
@@ -102,7 +103,7 @@ export default function Index() {
             <p className="text-base md:text-sm lg:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
               재산세, 법인세, 조세불복 등 복잡한 세금 문제로 고민중이신가요?
               <br />
-              이제 세무법��� 로고스 강남지점이 책임지고 해결해드리겠습니다.
+              이제 세무법인 로고스 강남지점이 책임지고 해결해드리겠습니다.
             </p>
           </div>
         </div>
@@ -115,18 +116,16 @@ export default function Index() {
             {/* Frame with content from uploaded image */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
               <div className="text-center">
-                <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
+                <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-6 md:mb-8">
                   전문가 그룹이 고객의 상황에 맞는
-                </p>
-                <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
+                  <br />
                   <span className="text-lg md:text-xl text-[#3C6ADD] font-bold italic">
                     &quot; 개인별 최적화된 세무 솔루션 &quot;
                   </span>
-                </p>
-                <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-6 md:mb-8">
-                  을 제공합니다.
+                  <br className="block md:hidden" />을 제공합니다.
                 </p>
               </div>
+
               <div className="text-center">
                 <Link
                   to="/team"
