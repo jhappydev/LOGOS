@@ -80,7 +80,7 @@ export default function Directions() {
   }, []);
 
   const handleNaverMap = () => {
-    const address = encodeURIComponent("서���특별시 강남구 테헤란로20길 18");
+    const address = encodeURIComponent("서울특별시 강남구 테헤란로20길 18");
     window.open(`https://map.naver.com/v5/search/${address}`, "_blank");
   };
 
@@ -113,8 +113,8 @@ export default function Directions() {
                     <strong>역삼역 3번 출구</strong>에서 직진
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    올리브영, 투썸플레이스에서 좌회전 후 백소정 앞까지 쭉
-                    들어오시면 됩니다.
+                    올리브영, 투썸플레이스에서 좌회전 후 <br />
+                    백소정 앞까지 쭉 들어오시면 됩니다.
                   </p>
                 </div>
 
@@ -124,7 +124,8 @@ export default function Directions() {
                     주소 및 연락처
                   </h3>
                   <p className="text-gray-700 mb-2">
-                    서울특별시 강남구 테헤란로20길 18 (부봉빌딩) 4층
+                    서울특별시 강남구 테헤란로20길 18 <br />
+                    (부봉빌딩) 4층
                   </p>
                   <p className="text-gray-600 text-sm mb-1">
                     전화번호: 02-563-2505
@@ -194,8 +195,30 @@ export default function Directions() {
             {/* Additional Info */}
             <div className="mt-6 bg-amber-50 p-4 rounded-lg">
               <p className="text-sm text-amber-800">
-                <strong>주차 안내:</strong> 건물 내 주차 공간이 제한되어 있으니,
-                대중교통 이용을 권장드립니다.
+                <strong>주차 안내:</strong>
+                <br />
+                건물
+                <wbr /> 내<wbr /> 주차장은
+                <wbr /> 승용차
+                <wbr /> 전용
+                <wbr /> 기계식
+                <wbr /> 주차장으로,
+                <br />
+                주차
+                <wbr /> 공간이
+                <wbr /> 제한되어
+                <wbr /> 있습니다.
+                <br />
+                인근
+                <wbr /> 공용주차장
+                <wbr /> 또는
+                <wbr /> 포스코
+                <wbr /> 건물
+                <wbr /> 유료주차장을
+                <br />
+                이용하시거나, <wbr /> 대중교통
+                <wbr /> 이용을
+                <wbr /> 권장드립니다.
               </p>
             </div>
           </div>

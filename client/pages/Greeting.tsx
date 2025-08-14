@@ -21,9 +21,9 @@ export default function Greeting() {
 
                 <p className="text-lg leading-relaxed mb-6">
                   저는 1993년부터 2025년 6월까지 국세청에서 32년간 근무하며
-                  조사, 부과, 징수, 국세심판 등 세법 전반에 걸쳐 다양한 실무를
-                  경험해왔습니다. 이러한 풍부한 실무 경험과 세법에 대한 깊은
-                  이해를 바탕으로 2025년 7월, 세무법인 로고스 강남지점을
+                  세무조사, 부과, 징수, 국세심판 등 세법 전반에 걸쳐 다양한
+                  실무를 경험해왔습니다. 이러한 풍부한 실무 경험과 세법에 대한
+                  깊은 이해를 바탕으로 2025년 7월, 세무법인 로고스 강남지점을
                   설립하게 되었습니다.
                 </p>
 
@@ -58,7 +58,7 @@ export default function Greeting() {
 
                 <div className="text-right mt-12">
                   <p className="text-lg font-medium flex flex-row justify-end items-start">
-                    <span style={{ paddingRight: "8px" }}>대표이사</span>
+                    <span style={{ paddingRight: "8px" }}>대표세무사</span>
                     <span style={{ fontSize: "25px" }}>
                       <strong>
                         <span style={{ fontSize: "24px" }}>윤 영 호</span>

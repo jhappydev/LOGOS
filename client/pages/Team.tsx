@@ -8,6 +8,7 @@ interface TeamMember {
   position: string;
   specialization: string;
   image: string;
+  email: string;
   career: string[];
 }
 
@@ -15,25 +16,12 @@ const teamMembers: TeamMember[] = [
   {
     id: "yoon",
     name: "윤 영 호",
-    position: "대표이사 / 세무사",
+    position: "대표세무사",
+    email: "youngtax25@naver.com",
     specialization: "세무조사, 재산세 (양도, 증여, 상속), 법인세 분야 전문가",
     image:
       "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
-      "국세청 32년 근무",
-      "반포재산, 도봉법인, 북전주조사과장",
-      "국세청 감사관실",
-      "서울청 1국, 조사 3국",
-      "역삼조사, 삼성법인, 강남재산",
-      "금천·성동조사",
-      "서울청 부과세과 팀장 등",
-      "국세청 32년 근��",
-      "반포재산, 도봉법인, 북전주조사과장",
-      "국세청 감사관실",
-      "서울청 1국, 조사 3국",
-      "역삼조사, 삼성법인, 강남재산",
-      "금천·성동조사",
-      "서울청 부과세과 팀장 등",
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
       "국세청 감사관실",
@@ -47,51 +35,30 @@ const teamMembers: TeamMember[] = [
     id: "lee",
     name: "이 영 섭",
     position: "고 문",
-    specialization: "기업 컸설팅, M&A 분야 전문가",
+    email: "joohan3183@naver.com",
+    specialization: "기업 컨설팅, M&A 분야 전문가",
     image:
       "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
-      "스닥상장사 대한뉴팜(주) 대표이사",
+      "코스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
-      "상명대학교 산업경영학과 초빙교��",
+      "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
-      "MBC ��략정보경영시스템 도입을 위한 진단",
-      "삼성전자 가전본부 고문",
-      "LG전자 가전본부 원가관리",
-      "SK Chemical ��식경영시스템",
-      "스닥상장사 대한뉴팜(주) 대표이사",
-      "한국철도공사(코레일) 경영평가위원",
-      "상명대학교 산업경영학과 초빙교수",
-      "대한민국정부 ���정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
-      "SK Chemical 지식경영시스템",
-      "스닥상장사 대한뉴팜(주) 대표이사",
-      "한국철도공사(코레일) 경영평가위원",
-      "상명대학교 산업경영학과 초빙교수",
-      "대한민국정부 헌정 사상 최초 민간 ���설팅 수행",
-      "MBC 전략정보경영시스템 도입을 위한 진단",
-      "삼성전자 가전본부 고문",
-      "LG전자 가전본부 원가���리",
       "SK Chemical 지식경영시스템",
     ],
   },
   {
     id: "noh",
     name: "노 현 철",
+    email: "fahrenheit99@naver.com",
     position: "이 사",
-    specialization: "소득세, ���가세, 재산세 전문가",
+    specialization: "소득세, 부가세, 재산세 전문가",
     image:
       "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
-    career: [
-      "국세청 15년 근무",
-      "분�� 법인 의정부 재산 등",
-      "국세청 15년 근무",
-      "분당 법인 의정부 재산 등",
-      "국세청 15년 근무",
-      "분당 법인 의정부 재산 등",
-    ],
+    career: ["국세청 15년 근무", "분당 법인 의정부 재산 등"],
   },
 ];
 
@@ -183,13 +150,13 @@ export default function Team() {
                       </h3>
 
                       {/* Position */}
-                      <p className="text-xs mb-3" style={{ color: "#703B1F" }}>
+                      <p className="text-ms mb-3" style={{ color: "#703B1F" }}>
                         {member.position}
                       </p>
 
                       {/* Specialization */}
                       <p
-                        className="text-xs leading-relaxed"
+                        className="text-ms leading-relaxed"
                         style={{ color: "#345A9E" }}
                       >
                         {member.specialization}
@@ -233,13 +200,13 @@ export default function Team() {
                       </h3>
 
                       {/* Position */}
-                      <p className="text-xs mb-3" style={{ color: "#703B1F" }}>
+                      <p className="text-ms mb-3" style={{ color: "#703B1F" }}>
                         {member.position}
                       </p>
 
                       {/* Specialization */}
                       <p
-                        className="text-xs leading-relaxed"
+                        className="text-ms leading-relaxed"
                         style={{ color: "#345A9E" }}
                       >
                         {member.specialization}
@@ -327,7 +294,7 @@ export default function Team() {
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
-                    <span>jason@outlook.com</span>
+                    <span>{selectedMember.email}</span>
                   </div>
                 </div>
               </div>
