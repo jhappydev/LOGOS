@@ -140,23 +140,23 @@ export default function Team() {
                         <img
                           src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
                           alt="로고"
-                          className="w-8 h-8 object-contain"
+                          className="w-10 h-10 object-contain"
                         />
                       </div>
 
                       {/* Name */}
-                      <h3 className="font-bold text-lg text-gray-900 mb-2">
+                      <h3 className="font-bold text-xl text-gray-900 mb-2">
                         {member.name}
                       </h3>
 
                       {/* Position */}
-                      <p className="text-ms mb-3" style={{ color: "#703B1F" }}>
+                      <p className="text-base mb-3" style={{ color: "#703B1F" }}>
                         {member.position}
                       </p>
 
                       {/* Specialization */}
                       <p
-                        className="text-ms leading-relaxed"
+                        className="text-base leading-relaxed"
                         style={{ color: "#345A9E" }}
                       >
                         {member.specialization}
