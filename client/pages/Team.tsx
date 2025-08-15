@@ -150,7 +150,10 @@ export default function Team() {
                       </h3>
 
                       {/* Position */}
-                      <p className="text-base mb-3" style={{ color: "#703B1F" }}>
+                      <p
+                        className="text-base mb-3"
+                        style={{ color: "#703B1F" }}
+                      >
                         {member.position}
                       </p>
 
@@ -200,7 +203,10 @@ export default function Team() {
                       </h3>
 
                       {/* Position */}
-                      <p className="text-base mb-3" style={{ color: "#703B1F" }}>
+                      <p
+                        className="text-base mb-3"
+                        style={{ color: "#703B1F" }}
+                      >
                         {member.position}
                       </p>
 
