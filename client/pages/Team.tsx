@@ -24,7 +24,7 @@ const teamMembers: TeamMember[] = [
     career: [
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
-      "국세청 감사관실",
+      "국세청 ���사관실",
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
@@ -239,18 +239,18 @@ export default function Team() {
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
                       alt="로고"
-                      className="w-8 h-8 object-contain"
+                      className="w-10 h-10 object-contain"
                     />
                   </div>
 
                   {/* Name - black, slightly bigger text */}
-                  <h3 className="font-bold text-lg text-black mb-2 text-left">
+                  <h3 className="font-bold text-xl text-black mb-2 text-left">
                     {member.name}
                   </h3>
 
                   {/* Position - #703B1F color */}
                   <p
-                    className="text-sm mb-3 text-left"
+                    className="text-base mb-3 text-left"
                     style={{ color: "#703B1F" }}
                   >
                     {member.position}
@@ -258,7 +258,7 @@ export default function Team() {
 
                   {/* Specialization - #345A9E color */}
                   <p
-                    className="text-sm mb-6 text-left leading-relaxed"
+                    className="text-base mb-6 text-left leading-relaxed"
                     style={{ color: "#345A9E" }}
                   >
                     {member.specialization}
