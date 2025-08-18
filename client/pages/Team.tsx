@@ -24,7 +24,7 @@ const teamMembers: TeamMember[] = [
     career: [
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
-      "국세청 ���사관실",
+      "국세청 감사관실",
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
@@ -376,7 +376,7 @@ export default function Team() {
                 <div className="text-xs text-gray-600">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
-                    <span>jason@outlook.com</span>
+                    <span>{selectedMember.email}</span>   {/* ← 이렇게 수정 */}
                   </div>
                 </div>
               </div>

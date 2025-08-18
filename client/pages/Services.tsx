@@ -60,7 +60,8 @@ export default function Services() {
                     onClick={() => toggleService(index)}
                     className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50"
                   >
-                    <h3 className="text-lg font-semibold text-gray-800">
+                    {/* 타이틀: 가장 큰 글자 */}
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">
                       {service.title}
                     </h3>
                     {expandedService === index ? (
@@ -72,8 +73,13 @@ export default function Services() {
 
                   {expandedService === index && (
                     <div className="px-4 pb-4">
-                      <p className="text-black">{service.description}</p>
-                      <p className="text-sm text-gray-500 mt-2 whitespace-pre-line">
+                      {/* 설명: 타이틀보다는 작고 세부보다는 큰 글자 */}
+                      <p className="text-base md:text-lg lg:text-xl text-black font-medium mt-2">
+                        {service.description}
+                      </p>
+
+                      {/* 세부 설명: 가장 작은 글자 */}
+                      <p className="text-sm md:text-base lg:text-lg text-gray-500 mt-2 whitespace-pre-line">
                         {service.detail}
                       </p>
                     </div>

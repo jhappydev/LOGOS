@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 export const useScrollAnimation = (options = {}) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,27 +7,23 @@ export const useScrollAnimation = (options = {}) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        // ✅ 보이면 true, 안 보이면 false
+        setIsVisible(entry.isIntersecting);
       },
       {
-        threshold: 0.3, // Trigger when 30% of element is visible
-        rootMargin: '-50px 0px', // Start animation 50px before element comes into view
-        ...options
+        threshold: 0.3, // 30% 이상 보일 때 트리거
+        rootMargin: "-50px 0px", // 50px 전에 미리 감지
+        ...options,
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    const current = ref.current;
+    if (current) observer.observe(current);
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+      if (current) observer.unobserve(current);
     };
-  }, []);
+  }, [options]);
 
   return [ref, isVisible] as const;
 };
