@@ -90,7 +90,7 @@ export default function Layout({
                 : "text-white hover:text-blue-200"
                 }`}
             >
-              구성원 소개
+              임원진 소개
             </Link>
             <Link
               to="/services"
@@ -155,7 +155,7 @@ export default function Layout({
                 : "text-white hover:text-blue-200"
                 }`}
             >
-              구성원 소개
+              임원진 소개
             </Link>
             <Link
               to="/services"
@@ -195,7 +195,7 @@ export default function Layout({
                   className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  구성원 소개
+                  임원진 소개
                 </Link>
               </li>
               <li>
