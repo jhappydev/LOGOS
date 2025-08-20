@@ -197,7 +197,8 @@ export default function Directions() {
 
             {/* Additional Info */}
             <div className="mt-6 bg-amber-50 p-4 rounded-lg">
-              <p className="text-sm text-amber-800">
+              {/* 모바일 버전 */}
+              <p className="block md:hidden text-sm text-amber-800">
                 <strong>주차 안내:</strong>
                 <br />
                 건물
@@ -224,6 +225,7 @@ export default function Directions() {
                 권장드립니다.
               </p>
 
+              {/* PC 버전 */}
               <p className="hidden md:block text-sm text-amber-800 whitespace-normal">
                 <strong>주차 안내:</strong>
                 <br />
@@ -232,6 +234,7 @@ export default function Directions() {
                 인근 공용주차장 또는 포스코 건물 유료주차장을 이용하시거나, 대중교통 이용을 권장드립니다.
               </p>
             </div>
+
           </div>
         </div>
       </section>
