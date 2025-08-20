@@ -23,23 +23,18 @@ export default function Index() {
             {/* Three Circles Design with Animation */}
             <div
               ref={keywordsRef}
-              className={`flex items-center justify-center mb-8 md:mb-16 transition-all duration-1000 ease-out ${keywordsVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-12"
+              className={`flex items-center justify-center mb-8 md:mb-16 transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
             >
               <div className="flex items-center space-x-2 md:space-x-6 lg:space-x-16">
                 {/* 최선 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                     }`}
                   style={{ transitionDelay: "200ms" }}
                 >
-                  <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    {/* 글자 크기 키움 */}
-                    <span className="text-white font-bold text-lg md:text-xl lg:text-3xl">
+                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-xl md:text-2xl lg:text-4xl">
                       최선
                     </span>
                   </div>
@@ -47,23 +42,19 @@ export default function Index() {
 
                 {/* Connecting Line */}
                 <div
-                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible
-                    ? "opacity-100 scale-x-100"
-                    : "opacity-0 scale-x-0"
+                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
                     }`}
                   style={{ transitionDelay: "400ms" }}
                 ></div>
 
                 {/* 최적 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                     }`}
                   style={{ transitionDelay: "600ms" }}
                 >
-                  <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-lg md:text-xl lg:text-3xl">
+                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-xl md:text-2xl lg:text-4xl">
                       최적
                     </span>
                   </div>
@@ -71,34 +62,42 @@ export default function Index() {
 
                 {/* Connecting Line */}
                 <div
-                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible
-                    ? "opacity-100 scale-x-100"
-                    : "opacity-0 scale-x-0"
+                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
                     }`}
                   style={{ transitionDelay: "800ms" }}
                 ></div>
 
                 {/* 최상 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                     }`}
                   style={{ transitionDelay: "1000ms" }}
                 >
-                  <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-lg md:text-xl lg:text-3xl">
+                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-xl md:text-2xl lg:text-4xl">
                       최상
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-            <p className="text-xl md:text-lg lg:text-2xl text-gray-700 leading-relaxed mb-6 md:mb-8">
+
+            {/* 모바일 전용 */}
+            <p className="text-xl text-gray-700 leading-relaxed mb-6 break-keep md:hidden">
+              재산세, 법인세, 조세불복 등 <br />
+              복잡한 세금 문제로 고민중이신가요?
+              <span className="block mb-4" />
+              이제 세무법인 로고스 강남지점이 <br />
+              책임지고 해결해드리겠습니다.
+            </p>
+
+            {/* PC/태블릿 전용 */}
+            <p className="hidden md:block text-lg lg:text-2xl text-gray-700 leading-relaxed mb-6 break-keep">
               재산세, 법인세, 조세불복 등 복잡한 세금 문제로 고민중이신가요?
-              <span className="block mb-4" /> {/* 줄바꿈 + 아래 여백 */}
+              <span className="block mb-4" />
               이제 세무법인 로고스 강남지점이 책임지고 해결해드리겠습니다.
             </p>
+
           </div>
         </div>
       </section>
