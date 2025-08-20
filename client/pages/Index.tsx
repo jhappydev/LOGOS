@@ -23,20 +23,18 @@ export default function Index() {
             {/* Three Circles Design with Animation */}
             <div
               ref={keywordsRef}
-              className={`flex items-center justify-center mb-8 md:mb-16 transition-all duration-1000 ease-out ${
-                keywordsVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-12"
-              }`}
+              className={`flex items-center justify-center mb-8 md:mb-16 transition-all duration-1000 ease-out ${keywordsVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-12"
+                }`}
             >
               <div className="flex items-center space-x-2 md:space-x-6 lg:space-x-16">
                 {/* 최선 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${
-                    keywordsVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-8"
-                  }`}
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                    }`}
                   style={{ transitionDelay: "200ms" }}
                 >
                   <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
@@ -49,21 +47,19 @@ export default function Index() {
 
                 {/* Connecting Line */}
                 <div
-                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${
-                    keywordsVisible
-                      ? "opacity-100 scale-x-100"
-                      : "opacity-0 scale-x-0"
-                  }`}
+                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible
+                    ? "opacity-100 scale-x-100"
+                    : "opacity-0 scale-x-0"
+                    }`}
                   style={{ transitionDelay: "400ms" }}
                 ></div>
 
                 {/* 최적 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${
-                    keywordsVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-8"
-                  }`}
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                    }`}
                   style={{ transitionDelay: "600ms" }}
                 >
                   <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
@@ -75,21 +71,19 @@ export default function Index() {
 
                 {/* Connecting Line */}
                 <div
-                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${
-                    keywordsVisible
-                      ? "opacity-100 scale-x-100"
-                      : "opacity-0 scale-x-0"
-                  }`}
+                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible
+                    ? "opacity-100 scale-x-100"
+                    : "opacity-0 scale-x-0"
+                    }`}
                   style={{ transitionDelay: "800ms" }}
                 ></div>
 
                 {/* 최상 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${
-                    keywordsVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-8"
-                  }`}
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
+                    }`}
                   style={{ transitionDelay: "1000ms" }}
                 >
                   <div className="w-16 h-16 md:w-24 md:h-24 lg:w-36 lg:h-36 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
@@ -100,9 +94,9 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <p className="text-base md:text-sm lg:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+            <p className="text-xl md:text-lg lg:text-2xl text-gray-700 leading-relaxed mb-6 md:mb-8">
               재산세, 법인세, 조세불복 등 복잡한 세금 문제로 고민중이신가요?
-              <br />
+              <span className="block mb-4" /> {/* 줄바꿈 + 아래 여백 */}
               이제 세무법인 로고스 강남지점이 책임지고 해결해드리겠습니다.
             </p>
           </div>
@@ -116,20 +110,23 @@ export default function Index() {
             {/* Frame with content from uploaded image */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
               <div className="text-center">
-                <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-6 md:mb-8">
-                  전문가 그룹이 고객의 상황에 맞는
-                  <br />
-                  <span className="text-lg md:text-xl text-[#3C6ADD] font-bold italic">
+                <p className="text-xl md:text-lg lg:text-2xl text-gray-700 mb-6 md:mb-8">
+                  <span className="block">
+                    전문가 그룹이 고객의 상황에 맞는
+                  </span>
+                  <span className="block mt-2 md:mt-2 text-xl md:text-2xl text-[#3C6ADD] font-bold italic">
                     &quot; 개인별 최적화된 세무 솔루션 &quot;
                   </span>
-                  <br className="block md:hidden" />을 제공합니다.
+                  <span className="block mt-1 lg:mt-2">
+                    을 제공합니다.
+                  </span>
                 </p>
               </div>
 
               <div className="text-center">
                 <Link
                   to="/team"
-                  className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-lg md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors mt-3"
+                  className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-lg md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors"
                 >
                   구성원 소개
                 </Link>
@@ -142,16 +139,16 @@ export default function Index() {
       {/* Frame 4: Services Section */}
       <section className="py-16 md:py-28 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-20">
+          <div className="text-center mb-8 md:mb-12"> {/* 기존 mb-12 md:mb-20 → mb-8 md:mb-12 */}
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               담당 업무
             </h3>
-            <p className="text-lg md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
+            <p className="text-lg lg:text-2xl font-semibold text-gray-700 max-w-2xl mx-auto">
+              이 모든 업무를 세무법인 로고스 강남에서 <wbr />제공하고 있습니다.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 max-w-5xl mx-auto">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -180,34 +177,34 @@ export default function Index() {
       <section className="py-16 md:py-28 bg-gradient-to-br from-[#7BB0E3]/10 to-[#7BB0E3]/20 border-t border-[#7BB0E3]/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-8">
+            <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">
               상담 문의
             </h3>
-            <p className="text-lg md:text-lg text-gray-600 mb-8 md:mb-12">
+            <p className="text-lg md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12">
               세무 관련 문의사항이 있으시면 언제든지 연락해 주세요.
             </p>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-[#7BB0E3]/30">
-                <h4 className="text-xl md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
+                <h4 className="text-xl md:text-xl lg:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">
                   전화 상담
                 </h4>
-                <p className="text-2xl md:text-2xl font-bold text-[#3d6bdd] mb-2">
+                <p className="text-2xl md:text-2xl lg:text-3xl font-bold text-[#3d6bdd] mb-2">
                   02-563-2505
                 </p>
-                <p className="text-lg md:text-base text-gray-600">
+                <p className="text-lg md:text-base lg:text-lg text-gray-600">
                   평일 9:00 - 18:00
                 </p>
               </div>
               <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-[#7BB0E3]/30">
-                <h4 className="text-xl md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
+                <h4 className="text-xl md:text-xl lg:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">
                   방문 상담
                 </h4>
-                <p className="text-lg md:text-base text-gray-700 mb-2">
+                <p className="text-lg md:text-base lg:text-lg text-gray-700 mb-2">
                   서울특별시 강남구 테헤란로20길 18
                 </p>
                 <Link
                   to="/directions"
-                  className="text-lg md:text-base text-[#3d6bdd] hover:text-[#2952cc] font-semibold"
+                  className="text-xl md:text-lg lg:text-2xl text-[#3d6bdd] hover:text-[#2952cc] font-semibold"
                 >
                   오시는 길 보기 →
                 </Link>

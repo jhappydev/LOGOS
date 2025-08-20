@@ -50,16 +50,6 @@ const teamMembers: TeamMember[] = [
       "SK Chemical 지식경영시스템",
     ],
   },
-  {
-    id: "noh",
-    name: "노 현 철",
-    email: "fahrenheit99@naver.com",
-    position: "이 사",
-    specialization: "소득세, 부가세, 재산세 전문가",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
-    career: ["국세청 15년 근무", "분당 법인 의정부 재산 등"],
-  },
 ];
 
 export default function Team() {
@@ -130,7 +120,7 @@ export default function Team() {
                 {teamMembers.slice(0, 2).map((member) => (
                   <div
                     key={member.id}
-                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
+                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 lg:p-8 cursor-pointer hover:shadow-md transition-shadow flex"
                     onClick={() => setSelectedMember(member)}
                   >
                     {/* Left side - Info */}
@@ -140,18 +130,18 @@ export default function Team() {
                         <img
                           src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
                           alt="로고"
-                          className="w-10 h-10 object-contain"
+                          className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
                         />
                       </div>
 
                       {/* Name */}
-                      <h3 className="font-bold text-xl text-gray-900 mb-2">
+                      <h3 className="font-bold text-xl lg:text-2xl text-gray-900 mb-2">
                         {member.name}
                       </h3>
 
                       {/* Position */}
                       <p
-                        className="text-base mb-3"
+                        className="text-base lg:text-lg mb-3"
                         style={{ color: "#703B1F" }}
                       >
                         {member.position}
@@ -159,7 +149,7 @@ export default function Team() {
 
                       {/* Specialization */}
                       <p
-                        className="text-base leading-relaxed"
+                        className="text-base lg:text-lg leading-relaxed"
                         style={{ color: "#345A9E" }}
                       >
                         {member.specialization}
@@ -171,7 +161,7 @@ export default function Team() {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-32 h-40 object-contain rounded bg-white"
+                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
                       />
                     </div>
                   </div>
@@ -183,7 +173,7 @@ export default function Team() {
                 {teamMembers.slice(2).map((member) => (
                   <div
                     key={member.id}
-                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
+                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 lg:p-8 cursor-pointer hover:shadow-md transition-shadow flex"
                     onClick={() => setSelectedMember(member)}
                   >
                     {/* Left side - Info */}
@@ -193,18 +183,18 @@ export default function Team() {
                         <img
                           src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
                           alt="로고"
-                          className="w-10 h-10 object-contain"
+                          className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
                         />
                       </div>
 
                       {/* Name */}
-                      <h3 className="font-bold text-xl text-gray-900 mb-2">
+                      <h3 className="font-bold text-xl lg:text-2xl text-gray-900 mb-2">
                         {member.name}
                       </h3>
 
                       {/* Position */}
                       <p
-                        className="text-base mb-3"
+                        className="text-base lg:text-lg mb-3"
                         style={{ color: "#703B1F" }}
                       >
                         {member.position}
@@ -212,7 +202,7 @@ export default function Team() {
 
                       {/* Specialization */}
                       <p
-                        className="text-base leading-relaxed"
+                        className="text-base lg:text-lg leading-relaxed"
                         style={{ color: "#345A9E" }}
                       >
                         {member.specialization}
@@ -224,7 +214,7 @@ export default function Team() {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-32 h-40 object-contain rounded bg-white"
+                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
                       />
                     </div>
                   </div>
@@ -249,12 +239,12 @@ export default function Team() {
                     />
                   </div>
 
-                  {/* Name - black, slightly bigger text */}
+                  {/* Name */}
                   <h3 className="font-bold text-xl text-black mb-2 text-left">
                     {member.name}
                   </h3>
 
-                  {/* Position - #703B1F color */}
+                  {/* Position */}
                   <p
                     className="text-base mb-3 text-left"
                     style={{ color: "#703B1F" }}
@@ -262,7 +252,7 @@ export default function Team() {
                     {member.position}
                   </p>
 
-                  {/* Specialization - #345A9E color */}
+                  {/* Specialization */}
                   <p
                     className="text-base mb-6 text-left leading-relaxed"
                     style={{ color: "#345A9E" }}
@@ -270,7 +260,7 @@ export default function Team() {
                     {member.specialization}
                   </p>
 
-                  {/* Photo at bottom center - no visible container */}
+                  {/* Photo */}
                   <div className="flex justify-center">
                     <img
                       src={member.image}
@@ -289,15 +279,15 @@ export default function Team() {
         {selectedMember && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
             {/* Desktop Layout */}
-            <div className="hidden md:flex bg-white rounded-lg shadow-lg max-w-2xl w-full max-h-[80vh]">
+            <div className="hidden lg:flex bg-white rounded-lg shadow-lg max-w-3xl w-full max-h-[80vh]">
               {/* Left side - Photo and contact info */}
-              <div className="flex-shrink-0 w-64 p-6 border-r border-gray-200">
+              <div className="flex-shrink-0 w-72 p-8 border-r border-gray-200">
                 <img
                   src={selectedMember.image}
                   alt={selectedMember.name}
-                  className="w-48 h-64 object-cover rounded mb-6 mx-auto"
+                  className="w-56 h-72 object-cover rounded mb-6 mx-auto"
                 />
-                <div className="space-y-2 text-sm text-gray-600">
+                <div className="space-y-2 text-base text-gray-600">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
                     <span>{selectedMember.email}</span>
@@ -306,34 +296,38 @@ export default function Team() {
               </div>
 
               {/* Right side - Info and career */}
-              <div className="flex-1 p-6 flex flex-col">
+              <div className="flex-1 p-8 flex flex-col">
                 <div className="flex items-start justify-between mb-6">
                   <div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-2">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
                       {selectedMember.name}
                     </h2>
-                    <p className="text-gray-600">{selectedMember.position}</p>
+                    <p className="text-lg lg:text-xl text-gray-600">
+                      {selectedMember.position}
+                    </p>
                   </div>
                   <button
                     onClick={() => setSelectedMember(null)}
                     className="text-gray-400 hover:text-gray-600 flex-shrink-0"
                   >
-                    <X size={20} />
+                    <X size={24} />
                   </button>
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
+                  <h3 className="font-bold text-lg lg:text-xl text-gray-900 mb-4">
+                    경력사항
+                  </h3>
                   <div className="relative overflow-hidden">
                     <div
-                      className="overflow-y-auto max-h-80 scrollbar-hide"
+                      className="overflow-y-auto max-h-96 scrollbar-hide"
                       id="career-scroll-desktop"
                     >
-                      <div className="space-y-2 pr-2">
+                      <div className="space-y-3 pr-2">
                         {selectedMember.career.map((item, index) => (
                           <p
                             key={index}
-                            className="text-gray-700 text-sm leading-relaxed"
+                            className="text-gray-700 text-sm lg:text-base leading-relaxed"
                           >
                             {item}
                           </p>
@@ -342,7 +336,7 @@ export default function Team() {
                     </div>
                     {/* 스크롤 그라데이션 */}
                     <div
-                      className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300"
+                      className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300"
                       id="scroll-gradient-desktop"
                     ></div>
                   </div>
@@ -350,8 +344,8 @@ export default function Team() {
               </div>
             </div>
 
-            {/* Mobile Layout - Now with full modal scroll */}
-            <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] overflow-y-auto">
+            {/* Mobile Layout */}
+            <div className="lg:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] overflow-y-auto">
               {/* Header with close button */}
               <div className="flex justify-end p-4 pb-2">
                 <button
@@ -376,7 +370,7 @@ export default function Team() {
                 <div className="text-xs text-gray-600">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
-                    <span>{selectedMember.email}</span>   {/* ← 이렇게 수정 */}
+                    <span>{selectedMember.email}</span>
                   </div>
                 </div>
               </div>
@@ -386,12 +380,10 @@ export default function Team() {
                 <h2 className="text-lg font-bold text-gray-900 mb-1">
                   {selectedMember.name}
                 </h2>
-                <p className="text-gray-600 text-sm">
-                  {selectedMember.position}
-                </p>
+                <p className="text-gray-600 text-sm">{selectedMember.position}</p>
               </div>
 
-              {/* Career section - simplified for full modal scroll */}
+              {/* Career section */}
               <div className="px-6 pb-6">
                 <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
                 <div className="space-y-2">
