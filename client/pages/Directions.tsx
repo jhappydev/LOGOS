@@ -201,27 +201,35 @@ export default function Directions() {
                 <strong>주차 안내:</strong>
                 <br />
                 건물
-                <wbr /> 내<wbr /> 주차장은
-                <wbr /> 승용차
-                <wbr /> 전용
-                <wbr /> 기계식
-                <wbr /> 주차장으로,
+                내 주차장은
+                승용차
+                전용
+                기계식
+                주차장으로,
                 <br />
                 주차
-                <wbr /> 공간이
-                <wbr /> 제한되어
-                <wbr /> 있습니다.
+                공간이
+                제한되어
+                있습니다.
                 <br />
                 인근
-                <wbr /> 공용주차장
-                <wbr /> 또는
-                <wbr /> 포스코
-                <wbr /> 건물
-                <wbr /> 유료주차장을
+                공용주차장
+                또는
+                포스코
+                건물
+                유료주차장을
                 <br />
-                이용하시거나, <wbr /> 대중교통
-                <wbr /> 이용을
-                <wbr /> 권장드립니다.
+                이용하시거나, 대중교통
+                이용을
+                권장드립니다.
+              </p>
+
+              <p className="hidden md:block text-sm text-amber-800 whitespace-normal">
+                <strong>주차 안내:</strong>
+                <br />
+                건물 내 주차장은 승용차 전용 기계식 주차장으로, 주차 공간이 제한되어 있습니다.
+                <br />
+                인근 공용주차장 또는 포스코 건물 유료주차장을 이용하시거나, 대중교통 이용을 권장드립니다.
               </p>
             </div>
           </div>
