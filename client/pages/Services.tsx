@@ -58,7 +58,10 @@ export default function Services() {
                 <div key={index} className="border border-gray-200 rounded-lg">
                   <button
                     onClick={() => toggleService(index)}
-                    className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50"
+                    className="w-full flex items-center justify-between p-4 text-left"
+                    style={{ backgroundColor: "#f7fbff" }} // 기본색을 더 연하게
+                    onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#d5e3f6")} // hover 시 기본색
+                    onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#f7fbff")} // 마우스 나가면 연한색
                   >
                     {/* 타이틀: 가장 큰 글자 */}
                     <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">
@@ -74,12 +77,12 @@ export default function Services() {
                   {expandedService === index && (
                     <div className="px-4 pb-4">
                       {/* 설명: 타이틀보다는 작고 세부보다는 큰 글자 */}
-                      <p className="text-base md:text-lg lg:text-xl text-black font-medium mt-2">
+                      <p className="text-base md:text-lg lg:text-xl text-[#345a9d] font-medium italic mt-2">
                         {service.description}
                       </p>
 
                       {/* 세부 설명: 가장 작은 글자 */}
-                      <p className="text-sm md:text-base lg:text-lg text-gray-500 mt-2 whitespace-pre-line">
+                      <p className="text-sm md:text-base lg:text-lg text-gray-700 mt-2 whitespace-pre-line">
                         {service.detail}
                       </p>
                     </div>
