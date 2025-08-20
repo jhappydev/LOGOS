@@ -137,9 +137,7 @@ export default function Team() {
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 lg:p-8 cursor-pointer hover:shadow-md transition-shadow flex"
                     onClick={() => setSelectedMember(member)}
                   >
-                    {/* Left side - Info */}
                     <div className="flex-1 flex flex-col mr-6">
-                      {/* Logo */}
                       <div className="mb-3">
                         <img
                           src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
@@ -147,21 +145,15 @@ export default function Team() {
                           className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
                         />
                       </div>
-
-                      {/* Name */}
                       <h3 className="font-bold text-xl lg:text-2xl text-gray-900 mb-2">
                         {member.name}
                       </h3>
-
-                      {/* Position */}
                       <p
                         className="text-base lg:text-lg mb-3"
                         style={{ color: "#703B1F" }}
                       >
                         {member.position}
                       </p>
-
-                      {/* Specialization */}
                       <p
                         className="text-base lg:text-lg leading-relaxed"
                         style={{ color: "#345A9E" }}
@@ -169,8 +161,6 @@ export default function Team() {
                         {member.specialization}
                       </p>
                     </div>
-
-                    {/* Right side - Photo */}
                     <div className="flex-shrink-0">
                       <img
                         src={member.image}
@@ -190,9 +180,7 @@ export default function Team() {
                     className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 lg:p-8 cursor-pointer hover:shadow-md transition-shadow flex"
                     onClick={() => setSelectedMember(member)}
                   >
-                    {/* Left side - Info */}
                     <div className="flex-1 flex flex-col mr-6">
-                      {/* Logo */}
                       <div className="mb-3">
                         <img
                           src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
@@ -200,21 +188,15 @@ export default function Team() {
                           className="w-10 h-10 lg:w-12 lg:h-12 object-contain"
                         />
                       </div>
-
-                      {/* Name */}
                       <h3 className="font-bold text-xl lg:text-2xl text-gray-900 mb-2">
                         {member.name}
                       </h3>
-
-                      {/* Position */}
                       <p
                         className="text-base lg:text-lg mb-3"
                         style={{ color: "#703B1F" }}
                       >
                         {member.position}
                       </p>
-
-                      {/* Specialization */}
                       <p
                         className="text-base lg:text-lg leading-relaxed"
                         style={{ color: "#345A9E" }}
@@ -222,8 +204,6 @@ export default function Team() {
                         {member.specialization}
                       </p>
                     </div>
-
-                    {/* Right side - Photo */}
                     <div className="flex-shrink-0">
                       <img
                         src={member.image}
@@ -236,7 +216,7 @@ export default function Team() {
               </div>
             </div>
 
-            {/* Mobile Layout */}
+            {/* Mobile Layout - 글자 키움 */}
             <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-6">
               {teamMembers.map((member) => (
                 <div
@@ -244,7 +224,6 @@ export default function Team() {
                   className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex flex-col"
                   onClick={() => setSelectedMember(member)}
                 >
-                  {/* Logo at top left */}
                   <div className="flex justify-start mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
@@ -253,28 +232,24 @@ export default function Team() {
                     />
                   </div>
 
-                  {/* Name */}
-                  <h3 className="font-bold text-xl text-black mb-2 text-left">
+                  <h3 className="font-bold text-2xl text-black mb-2 text-left">
                     {member.name}
                   </h3>
 
-                  {/* Position */}
                   <p
-                    className="text-base mb-3 text-left"
+                    className="text-lg mb-3 text-left"
                     style={{ color: "#703B1F" }}
                   >
                     {member.position}
                   </p>
 
-                  {/* Specialization */}
                   <p
-                    className="text-base mb-6 text-left leading-relaxed"
+                    className="text-lg mb-6 text-left leading-relaxed"
                     style={{ color: "#345A9E" }}
                   >
                     {member.specialization}
                   </p>
 
-                  {/* Photo */}
                   <div className="flex justify-center">
                     <img
                       src={member.image}
@@ -291,76 +266,74 @@ export default function Team() {
 
         {/* Modal */}
         {selectedMember && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            {/* Desktop Layout */}
-            <div className="hidden lg:flex bg-white rounded-lg shadow-lg max-w-3xl w-full max-h-[80vh]">
-              {/* Left side - Photo and contact info */}
-              <div className="flex-shrink-0 w-72 p-8 border-r border-gray-200">
-                <img
-                  src={selectedMember.image}
-                  alt={selectedMember.name}
-                  className="w-56 h-72 object-cover rounded mb-6 mx-auto"
-                />
-                <div className="space-y-2 text-base text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <span>📧</span>
-                    <span>{selectedMember.email}</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right side - Info and career */}
-              <div className="flex-1 p-8 flex flex-col">
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
-                      {selectedMember.name}
-                    </h2>
-                    <p className="text-lg lg:text-xl text-gray-600">
-                      {selectedMember.position}
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => setSelectedMember(null)}
-                    className="text-gray-400 hover:text-gray-600 flex-shrink-0"
-                  >
-                    <X size={24} />
-                  </button>
-                </div>
-
-                <div className="flex-1">
-                  <h3 className="font-bold text-lg lg:text-xl text-gray-900 mb-4">
-                    경력사항
-                  </h3>
-                  <div className="relative overflow-hidden">
-                    <div
-                      className="overflow-y-auto max-h-96 scrollbar-hide"
-                      id="career-scroll-desktop"
-                    >
-                      <div className="space-y-3 pr-2">
-                        {selectedMember.career.map((item, index) => (
-                          <p
-                            key={index}
-                            className="text-gray-700 text-sm lg:text-base leading-relaxed"
-                          >
-                            {item}
-                          </p>
-                        ))}
-                      </div>
+          <>
+            {/* Desktop Modal */}
+            <div className="hidden lg:flex fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 z-50">
+              <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full max-h-[80vh] flex">
+                <div className="flex-shrink-0 w-72 p-8 border-r border-gray-200">
+                  <img
+                    src={selectedMember.image}
+                    alt={selectedMember.name}
+                    className="w-56 h-72 object-cover rounded mb-6 mx-auto"
+                  />
+                  <div className="space-y-2 text-base text-gray-600">
+                    <div className="flex items-center gap-2">
+                      <span>📧</span>
+                      <span>{selectedMember.email}</span>
                     </div>
-                    {/* 스크롤 그라데이션 */}
-                    <div
-                      className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300"
-                      id="scroll-gradient-desktop"
-                    ></div>
+                  </div>
+                </div>
+
+                <div className="flex-1 p-8 flex flex-col">
+                  <div className="flex items-start justify-between mb-6">
+                    <div>
+                      <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+                        {selectedMember.name}
+                      </h2>
+                      <p className="text-lg lg:text-xl text-gray-600">
+                        {selectedMember.position}
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setSelectedMember(null)}
+                      className="text-gray-400 hover:text-gray-600 flex-shrink-0"
+                    >
+                      <X size={24} />
+                    </button>
+                  </div>
+
+                  <div className="flex-1">
+                    <h3 className="font-bold text-lg lg:text-xl text-gray-900 mb-4">
+                      경력사항
+                    </h3>
+                    <div className="relative overflow-hidden">
+                      <div
+                        className="overflow-y-auto max-h-96 scrollbar-hide"
+                        id="career-scroll-desktop"
+                      >
+                        <div className="space-y-3 pr-2">
+                          {selectedMember.career.map((item, index) => (
+                            <p
+                              key={index}
+                              className="text-gray-700 text-sm lg:text-base leading-relaxed"
+                            >
+                              {item}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                      <div
+                        className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300"
+                        id="scroll-gradient-desktop"
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Mobile Layout */}
-            <div className="lg:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] overflow-y-auto">
-              {/* Header with close button */}
+            {/* Mobile Modal - 글자 키움 */}
+            <div className="lg:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] overflow-y-auto fixed inset-0 z-50 mx-auto my-8">
               <div className="flex justify-end p-4 pb-2">
                 <button
                   onClick={() => setSelectedMember(null)}
@@ -370,7 +343,6 @@ export default function Team() {
                 </button>
               </div>
 
-              {/* Photo section */}
               <div className="px-6 pb-4">
                 <img
                   src={selectedMember.image}
@@ -379,9 +351,8 @@ export default function Team() {
                 />
               </div>
 
-              {/* Email section */}
               <div className="px-6 pb-4">
-                <div className="text-xs text-gray-600">
+                <div className="text-lg text-gray-600">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
                     <span>{selectedMember.email}</span>
@@ -389,22 +360,20 @@ export default function Team() {
                 </div>
               </div>
 
-              {/* Name and position section */}
               <div className="px-6 pb-4">
-                <h2 className="text-lg font-bold text-gray-900 mb-1">
+                <h2 className="text-xl font-bold text-gray-900 mb-1">
                   {selectedMember.name}
                 </h2>
-                <p className="text-gray-600 text-sm">{selectedMember.position}</p>
+                <p className="text-lg text-gray-600">{selectedMember.position}</p>
               </div>
 
-              {/* Career section */}
               <div className="px-6 pb-6">
-                <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
+                <h3 className="font-bold text-lg text-gray-900 mb-4">경력사항</h3>
                 <div className="space-y-2">
                   {selectedMember.career.map((item, index) => (
                     <p
                       key={index}
-                      className="text-gray-700 text-sm leading-relaxed"
+                      className="text-lg text-gray-700 leading-relaxed"
                     >
                       {item}
                     </p>
@@ -412,7 +381,7 @@ export default function Team() {
                 </div>
               </div>
             </div>
-          </div>
+          </>
         )}
       </section>
     </Layout>
