@@ -76,15 +76,20 @@ export default function Services() {
 
                   {expandedService === index && (
                     <div className="px-4 pb-4">
-                      {/* 설명: 타이틀보다는 작고 세부보다는 큰 글자 */}
-                      <p className="text-base md:text-lg lg:text-xl text-[#345a9d] font-medium italic mt-2">
+                      {/* 설명 */}
+                      <p className="text-lg md:text-lg lg:text-xl text-[#373F9C] font-semibold italic mt-2 break-keep">
                         {service.description}
                       </p>
 
-                      {/* 세부 설명: 가장 작은 글자 */}
-                      <p className="text-sm md:text-base lg:text-lg text-gray-700 mt-2 whitespace-pre-line">
-                        {service.detail}
-                      </p>
+                      {/* 세부 설명: 각 줄마다 p로 나누고 간격 mb-1 추가 */}
+                      {service.detail.split("\n").map((line, idx) => (
+                        <p
+                          key={idx}
+                          className="text-base md:text-lg lg:text-xl text-black mt-2 mb-1 break-keep"
+                        >
+                          {line}
+                        </p>
+                      ))}
                     </div>
                   )}
                 </div>

@@ -76,8 +76,8 @@ export default function Layout({
           <nav className="hidden lg:flex items-center space-x-8 order-3">
             <Link
               to="/greeting"
-              className={`font-semibold text-base lg:text-lg xl:text-xl transition-colors ${isScrolled
-                ? "text-[#345A9E] hover:text-[#7BB0E3]"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
+                ? "text-[#373F9C] hover:text-[#7BB0E3]"
                 : "text-white hover:text-blue-200"
                 }`}
             >
@@ -85,8 +85,8 @@ export default function Layout({
             </Link>
             <Link
               to="/team"
-              className={`font-semibold text-base lg:text-lg xl:text-xl transition-colors ${isScrolled
-                ? "text-[#345A9E] hover:text-[#7BB0E3]"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
+                ? "text-[#373F9C] hover:text-[#7BB0E3]"
                 : "text-white hover:text-blue-200"
                 }`}
             >
@@ -94,8 +94,8 @@ export default function Layout({
             </Link>
             <Link
               to="/services"
-              className={`font-semibold text-base lg:text-lg xl:text-xl transition-colors ${isScrolled
-                ? "text-[#345A9E] hover:text-[#7BB0E3]"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
+                ? "text-[#373F9C] hover:text-[#7BB0E3]"
                 : "text-white hover:text-blue-200"
                 }`}
             >
@@ -103,8 +103,8 @@ export default function Layout({
             </Link>
             <Link
               to="/directions"
-              className={`font-semibold text-base lg:text-lg xl:text-xl transition-colors ${isScrolled
-                ? "text-[#345A9E] hover:text-[#7BB0E3]"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
+                ? "text-[#373F9C] hover:text-[#7BB0E3]"
                 : "text-white hover:text-blue-200"
                 }`}
             >
@@ -138,12 +138,52 @@ export default function Layout({
               </button>
             </div>
           </div>
+          <nav className="hidden lg:flex items-center space-x-8 order-3">
+            <Link
+              to="/greeting"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
+                ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                : "text-white hover:text-blue-200"
+                }`}
+            >
+              인사말
+            </Link>
+            <Link
+              to="/team"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
+                ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                : "text-white hover:text-blue-200"
+                }`}
+            >
+              구성원 소개
+            </Link>
+            <Link
+              to="/services"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
+                ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                : "text-white hover:text-blue-200"
+                }`}
+            >
+              담당 업무
+            </Link>
+            <Link
+              to="/directions"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
+                ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                : "text-white hover:text-blue-200"
+                }`}
+            >
+              오시는 길
+            </Link>
+          </nav>
+
+          {/* Mobile Slide Menu */}
           <nav className="p-4">
             <ul className="space-y-4">
               <li>
                 <Link
                   to="/greeting"
-                  className="block text-base lg:text-lg xl:text-xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
+                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   인사말
@@ -152,7 +192,7 @@ export default function Layout({
               <li>
                 <Link
                   to="/team"
-                  className="block text-base lg:text-lg xl:text-xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
+                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   구성원 소개
@@ -161,7 +201,7 @@ export default function Layout({
               <li>
                 <Link
                   to="/services"
-                  className="block text-base lg:text-lg xl:text-xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
+                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   담당 업무
@@ -170,7 +210,7 @@ export default function Layout({
               <li>
                 <Link
                   to="/directions"
-                  className="block text-base lg:text-lg xl:text-xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
+                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   오시는 길

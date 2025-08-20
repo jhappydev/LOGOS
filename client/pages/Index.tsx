@@ -33,12 +33,13 @@ export default function Index() {
                     }`}
                   style={{ transitionDelay: "200ms" }}
                 >
-                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-xl md:text-2xl lg:text-4xl">
+                  <div className="w-24 h-24 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-2xl md:text-2xl lg:text-4xl">
                       최선
                     </span>
                   </div>
                 </div>
+
 
                 {/* Connecting Line */}
                 <div
@@ -53,12 +54,13 @@ export default function Index() {
                     }`}
                   style={{ transitionDelay: "600ms" }}
                 >
-                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-xl md:text-2xl lg:text-4xl">
+                  <div className="w-24 h-24 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-2xl md:text-2xl lg:text-4xl">
                       최적
                     </span>
                   </div>
                 </div>
+
 
                 {/* Connecting Line */}
                 <div
@@ -73,12 +75,13 @@ export default function Index() {
                     }`}
                   style={{ transitionDelay: "1000ms" }}
                 >
-                  <div className="w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-xl md:text-2xl lg:text-4xl">
+                  <div className="w-24 h-24 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
+                    <span className="text-white font-bold text-2xl md:text-2xl lg:text-4xl">
                       최상
                     </span>
                   </div>
                 </div>
+
               </div>
             </div>
 
@@ -113,8 +116,8 @@ export default function Index() {
                   <span className="block">
                     전문가 그룹이 고객의 상황에 맞는
                   </span>
-                  <span className="block mt-2 md:mt-2 text-xl md:text-2xl text-[#3C6ADD] font-bold italic">
-                    &quot; 개인별 최적화된 세무 솔루션 &quot;
+                  <span className="block mt-2 break-keep md:mt-2 text-2xl md:text-2xl text-[#365B9F] font-bold italic">
+                    개인별 최적화된 세무 솔루션
                   </span>
                   <span className="block mt-1 lg:mt-2">
                     을 제공합니다.
@@ -142,8 +145,15 @@ export default function Index() {
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               담당 업무
             </h3>
-            <p className="text-lg lg:text-2xl font-semibold text-gray-700 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 <wbr />제공하고 있습니다.
+            {/* 모바일 전용 */}
+            <p className="text-lg lg:text-2xl font-semibold text-gray-700 max-w-2xl mx-auto md:hidden">
+              이 모든 업무를 세무법인 로고스 강남에서 <br />
+              제공하고 있습니다.
+            </p>
+
+            {/* PC/태블릿 전용 */}
+            <p className="hidden md:block text-lg lg:text-2xl font-semibold text-gray-700 max-w-2xl mx-auto">
+              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
             </p>
           </div>
 
@@ -179,9 +189,17 @@ export default function Index() {
             <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">
               상담 문의
             </h3>
-            <p className="text-lg md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12">
+            {/* 모바일 전용 */}
+            <p className="text-lg text-gray-600 mb-8 md:hidden">
+              세무 관련 문의사항이 있으시면 언제든지 <br />
+              연락해 주세요.
+            </p>
+
+            {/* PC/태블릿 전용 */}
+            <p className="hidden md:block text-lg md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12">
               세무 관련 문의사항이 있으시면 언제든지 연락해 주세요.
             </p>
+
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-[#7BB0E3]/30">
                 <h4 className="text-xl md:text-xl lg:text-2xl font-semibold text-gray-900 mb-3 md:mb-4">
