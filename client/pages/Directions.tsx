@@ -108,32 +108,32 @@ export default function Directions() {
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
               <div>
                 <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
-                    <Train className="w-5 h-5 mr-2 text-blue-600" />
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-3 flex items-center">
+                    <Train className="w-6 h-6 mr-2 text-blue-600" />
                     지하철 이용 안내
                   </h3>
-                  <p className="text-gray-700 leading-relaxed mb-2">
+                  <p className="text-lg text-gray-700 leading-relaxed mb-2">
                     <strong>역삼역 3번 출구</strong>에서 직진
                   </p>
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-lg text-gray-700 leading-relaxed">
                     올리브영, 투썸플레이스에서 좌회전 후 <br />
                     백소정 앞까지 쭉 들어오시면 됩니다.
                   </p>
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3 flex items-center">
-                    <MapPin className="w-5 h-5 mr-2 text-blue-600" />
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-3 flex items-center">
+                    <MapPin className="w-6 h-6 mr-2 text-blue-600" />
                     주소 및 연락처
                   </h3>
-                  <p className="text-gray-700 mb-2">
+                  <p className="text-lg text-gray-700 mb-2">
                     서울특별시 강남구 테헤란로20길 18 <br />
                     (부봉빌딩) 4층
                   </p>
-                  <p className="text-gray-600 text-sm mb-1">
+                  <p className="text-lg text-gray-600 mb-1">
                     전화번호: 02-563-2505
                   </p>
-                  <p className="text-gray-600 text-sm">FAX: 02-563-2506</p>
+                  <p className="text-lg text-gray-600">FAX: 02-563-2506</p>
                 </div>
               </div>
 

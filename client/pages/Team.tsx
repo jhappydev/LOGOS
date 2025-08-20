@@ -50,6 +50,20 @@ const teamMembers: TeamMember[] = [
       "SK Chemical 지식경영시스템",
     ],
   },
+  {
+    id: "lim",
+    name: "임 규 미",
+    position: "세 무 사",
+    email: "kyumilim@naver.com",
+    specialization: "법인세, 소득세, 부가세 분야 전문가",
+    image: "/images/임규미.jpg",
+    career: [
+      "전북대학교 행정복지학부",
+      "카이스트 경영전문대학원",
+      "삼성전자 한국총괄 근무",
+      "동부하이텍 근무",
+    ],
+  },
 ];
 
 export default function Team() {
@@ -109,7 +123,7 @@ export default function Team() {
   }, [selectedMember]);
 
   return (
-    <Layout heroTitle="구성원">
+    <Layout heroTitle="임원진">
       <section className="py-16 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
