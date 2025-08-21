@@ -34,7 +34,7 @@ const teamMembers: TeamMember[] = [
   {
     id: "lee",
     name: "이 영 섭",
-    position: "고 문",
+    position: "경영 컨설팅 연구소장",
     email: "joohan3183@naver.com",
     specialization: "기업 컨설팅, M&A 분야 전문가",
     image:

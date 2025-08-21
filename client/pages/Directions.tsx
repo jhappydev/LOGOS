@@ -186,7 +186,7 @@ export default function Directions() {
                 승용차
                 전용
                 기계식
-                주차장으로,
+                주차장으로
                 <br />
                 주차
                 공간이
@@ -200,7 +200,7 @@ export default function Directions() {
                 건물
                 유료주차장을
                 <br />
-                이용하시거나, 대중교통
+                이용하시거나 대중교통
                 이용을
                 권장드립니다.
               </p>
