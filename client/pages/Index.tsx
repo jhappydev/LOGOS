@@ -5,13 +5,31 @@ import { useScrollAnimation } from "../hooks/useScrollAnimation";
 export default function Index() {
   const [keywordsRef, keywordsVisible] = useScrollAnimation();
 
-  const services = [
-    "세금신고업무",
-    "상속, 증여, 양도 신고",
-    "경정청구(환급)",
-    "조세불복",
-    "세무컨설팅",
-    "세무조사 수임",
+  const servicesData = [
+    {
+      title: "세금신고업무",
+      description: "정확하고 효율적인 신고로\n 불필요한 세금 부담 최소화",
+    },
+    {
+      title: "상속, 증여, 양도 신고",
+      description: "복잡한 절차도 한 번에 해결",
+    },
+    {
+      title: "경정청구(환급)",
+      description: "놓친 세금, 되돌려 받으세요",
+    },
+    {
+      title: "조세불복",
+      description: "부당한 과세로부터 권익 보호",
+    },
+    {
+      title: "세무컨설팅",
+      description: "세무와 경영을 함께 보는 종합 솔루션",
+    },
+    {
+      title: "세무조사 수임",
+      description: "대응부터 사후 관리까지 전문가와 함께 하세요",
+    },
   ];
 
   return (
@@ -20,7 +38,6 @@ export default function Index() {
       <section className="py-12 md:py-24 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Three Circles Design with Animation */}
             <div
               ref={keywordsRef}
               className={`flex items-center justify-center mb-8 md:mb-16 transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
@@ -39,7 +56,6 @@ export default function Index() {
                     </span>
                   </div>
                 </div>
-
 
                 {/* Connecting Line */}
                 <div
@@ -61,7 +77,6 @@ export default function Index() {
                   </div>
                 </div>
 
-
                 {/* Connecting Line */}
                 <div
                   className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
@@ -81,7 +96,6 @@ export default function Index() {
                     </span>
                   </div>
                 </div>
-
               </div>
             </div>
 
@@ -100,7 +114,6 @@ export default function Index() {
               <span className="block mb-4" />
               이제 세무법인 로고스 강남지점이 책임지고 해결해드리겠습니다.
             </p>
-
           </div>
         </div>
       </section>
@@ -109,19 +122,14 @@ export default function Index() {
       <section className="py-12 md:py-24 bg-blue-200">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
-            {/* Frame with content from uploaded image */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
               <div className="text-center">
                 <p className="text-xl md:text-lg lg:text-2xl text-gray-700 mb-6 md:mb-8">
-                  <span className="block">
-                    전문가 그룹이 고객의 상황에 맞는
-                  </span>
+                  <span className="block">전문가 그룹이 고객의 상황에 맞는</span>
                   <span className="block mt-2 break-keep md:mt-2 text-2xl md:text-2xl text-[#365B9F] font-bold">
                     개인별 최적화된 세무 솔루션
                   </span>
-                  <span className="block mt-1 lg:mt-2">
-                    을 제공합니다.
-                  </span>
+                  <span className="block mt-1 lg:mt-2">을 제공합니다.</span>
                 </p>
               </div>
 
@@ -141,33 +149,44 @@ export default function Index() {
       {/* Frame 4: Services Section */}
       <section className="py-16 md:py-28 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8 md:mb-12"> {/* 기존 mb-12 md:mb-20 → mb-8 md:mb-12 */}
+          <div className="text-center mb-8 md:mb-12">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               담당 업무
             </h3>
-            {/* 모바일 전용 */}
             <p className="text-lg lg:text-2xl font-semibold text-gray-700 max-w-2xl mx-auto md:hidden">
               세무법인 로고스 강남에선 다음의 업무를 <br />
               제공하고 있습니다.
             </p>
-
-            {/* PC/태블릿 전용 */}
             <p className="hidden md:block text-lg lg:text-2xl font-semibold text-gray-700 max-w-2xl mx-auto">
               세무법인 로고스 강남에선 다음의 업무를 제공하고 있습니다.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 max-w-5xl mx-auto">
-            {services.map((service, index) => (
+            {servicesData.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-4 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow group flex flex-col border-4 border-[#7bb0e3]"
+                className="bg-white p-4 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-all group flex flex-col border-4 border-[#7bb0e3] overflow-hidden"
               >
+                {/* 상단 컬러 바 */}
                 <div className="h-1.5 md:h-2 w-8 md:w-12 bg-[#7BB0E3] mb-4 md:mb-6 group-hover:w-12 md:group-hover:w-16 transition-all duration-300 text-center mx-auto"></div>
-                <h4 className="text-xl md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 text-center">
-                  {service}
+
+                {/* 서비스 타이틀 */}
+                <h4 className="text-xl md:text-xl font-semibold text-gray-800 mb-2 text-center">
+                  {service.title}
                 </h4>
+
+                {/* description */}
+                <p className="text-[#365b9f] text-base md:text-lg text-center max-h-0 group-hover:max-h-40 transition-all duration-300 overflow-hidden font-semibold break-keep">
+                  {service.description.split("\n").map((line, idx) => (
+                    <span key={idx}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
+                </p>
               </div>
+
             ))}
           </div>
 
@@ -189,13 +208,11 @@ export default function Index() {
             <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">
               상담 문의
             </h3>
-            {/* 모바일 전용 */}
+
             <p className="text-lg text-gray-600 mb-8 md:hidden">
               세무 관련 문의사항이 있으시면 언제든지 <br />
               연락해 주세요.
             </p>
-
-            {/* PC/태블릿 전용 */}
             <p className="hidden md:block text-lg md:text-lg lg:text-xl text-gray-600 mb-8 md:mb-12">
               세무 관련 문의사항이 있으시면 언제든지 연락해 주세요.
             </p>

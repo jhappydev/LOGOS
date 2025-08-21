@@ -38,7 +38,7 @@ export default function Services() {
     },
     {
       title: "세무조사 수임",
-      description: "세무조사의 모든 단계, 전문가가 함께 합니다",
+      description: "대응부터 사후 관리까지 전문가와 함께 하세요",
       detail:
         "• 조사 전 사전 준비, 자료 정리, 과세자료 분석\n• 조사 중 현장 대응 및 국세청 협의\n• 조사 종료 후 사후관리까지 전 과정 책임 수행",
     },
