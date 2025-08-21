@@ -123,7 +123,7 @@ export default function Team() {
   }, [selectedMember]);
 
   return (
-    <Layout heroTitle="임원진">
+    <Layout heroTitle="임원진 소개">
       <section className="py-16 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">

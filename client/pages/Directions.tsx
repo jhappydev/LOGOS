@@ -84,17 +84,6 @@ export default function Directions() {
     window.open(`https://map.naver.com/v5/search/${address}`, "_blank");
   };
 
-  const handleNavigation = () => {
-    const lat = 37.498095; // 도착지 위도
-    const lng = 127.028002; // 도착지 경도
-    const destination = encodeURIComponent("세무법인 로고스 강남지점");
-
-    // 출발지는 "-"로 비워두고, 도착지 좌표와 명칭을 지정
-    const url = `https://map.naver.com/v5/directions/-/${lat},${lng},${destination}`;
-    window.open(url, "_blank");
-  };
-
-
   const handleKakaoMap = () => {
     const address = encodeURIComponent("서울특별시 강남구 테헤란로20길 18");
     window.open(`https://map.kakao.com/link/search/${address}`, "_blank");
@@ -152,15 +141,6 @@ export default function Directions() {
                 길찾기 및 지도 서비스
               </h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <button
-                  onClick={handleNavigation}
-                  className="flex items-center justify-center space-x-2 bg-green-600 text-white px-4 py-3 rounded-lg hover:bg-green-700 transition-colors"
-                >
-                  <Navigation className="w-4 h-4" />
-                  <span>네이버 길찾기</span>
-                  <ExternalLink className="w-3 h-3" />
-                </button>
-
                 <button
                   onClick={handleNaverMap}
                   className="flex items-center justify-center space-x-2 bg-green-500 text-white px-4 py-3 rounded-lg hover:bg-green-600 transition-colors"
