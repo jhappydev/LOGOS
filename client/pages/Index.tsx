@@ -116,7 +116,7 @@ export default function Index() {
                   <span className="block">
                     전문가 그룹이 고객의 상황에 맞는
                   </span>
-                  <span className="block mt-2 break-keep md:mt-2 text-2xl md:text-2xl text-[#365B9F] font-bold italic">
+                  <span className="block mt-2 break-keep md:mt-2 text-2xl md:text-2xl text-[#365B9F] font-bold">
                     개인별 최적화된 세무 솔루션
                   </span>
                   <span className="block mt-1 lg:mt-2">
@@ -147,13 +147,13 @@ export default function Index() {
             </h3>
             {/* 모바일 전용 */}
             <p className="text-lg lg:text-2xl font-semibold text-gray-700 max-w-2xl mx-auto md:hidden">
-              이 모든 업무를 세무법인 로고스 강남에서 <br />
+              세무법인 로고스 강남에선 다음의 업무를 <br />
               제공하고 있습니다.
             </p>
 
             {/* PC/태블릿 전용 */}
             <p className="hidden md:block text-lg lg:text-2xl font-semibold text-gray-700 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
+              세무법인 로고스 강남에선 다음의 업무를 제공하고 있습니다.
             </p>
           </div>
 

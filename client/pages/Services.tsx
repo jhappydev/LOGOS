@@ -49,7 +49,7 @@ export default function Services() {
   };
 
   return (
-    <Layout heroTitle="담당업무">
+    <Layout heroTitle="담당 업무">
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
