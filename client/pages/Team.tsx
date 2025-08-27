@@ -53,7 +53,7 @@ const teamMembers: TeamMember[] = [
   {
     id: "yjw",
     name: "윤 지 원",
-    position: "세 무 사",
+    position: "이 사",
     email: " wontax25@gmail.com",
     specialization: "법인세, 소득세, 부가세 분야 전문가",
     image: "images/윤지원.jpeg",
