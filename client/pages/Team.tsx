@@ -23,7 +23,9 @@ const teamMembers: TeamMember[] = [
       "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 32년 근무",
-      "반포재산, 도봉법인, 북전주조사과장",
+      "반포 세무서 재산세 과장",
+      "도봉 세무서 법인 재산세 과장",
+      "북전주 세무서 조사과장",
       "국세청 감사관실",
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
@@ -159,9 +161,11 @@ export default function Team() {
                     </div>
                     <div className="flex-shrink-0">
                       <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
+                      onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
+                      draggable={false} // 드래그 방지 (추가 추천)
                       />
                     </div>
                   </div>
@@ -204,7 +208,13 @@ export default function Team() {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
+                        onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
+                        draggable={false} // 드래그 방지 (추가 추천)
+                        className={
+                          member.id === "jyh"
+                            ? "w-44 h-56 object-cover rounded bg-white" // 정영호님만 크게
+                            : "w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white" // 나머지 카드 그대로
+                        }
                       />
                     </div>
                   </div>
@@ -250,6 +260,8 @@ export default function Team() {
                     <img
                       src={member.image}
                       alt={member.name}
+                      onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
+                      draggable={false} // 드래그 방지 (추가 추천)
                       className="w-40 h-48 object-contain rounded"
                       style={{ backgroundColor: "transparent" }}
                     />
@@ -270,6 +282,8 @@ export default function Team() {
                   <img
                     src={selectedMember.image}
                     alt={selectedMember.name}
+                    onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
+                    draggable={false} // 드래그 방지 (추가 추천)
                     className="w-56 h-72 object-cover rounded mb-6 mx-auto"
                   />
                   <div className="space-y-2 text-base text-gray-600">
@@ -343,6 +357,8 @@ export default function Team() {
                 <img
                   src={selectedMember.image}
                   alt={selectedMember.name}
+                  onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
+                  draggable={false} // 드래그 방지 (추가 추천)
                   className="w-full h-56 object-contain rounded bg-white"
                 />
               </div>
