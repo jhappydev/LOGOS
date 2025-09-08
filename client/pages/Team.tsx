@@ -62,6 +62,16 @@ const teamMembers: TeamMember[] = [
     career: [
     ],
   },
+  {
+    id: "jyh",
+    name: "정 영 호",
+    position: "컨설팅",
+    email: " yhfor0505@naver.com",
+    specialization: "컨설팅, 조세 불복 전문",
+    image: "images/정영호.jpeg",
+    career: ["고려대 법학과 졸업",
+    ],
+  },
 ];
 
 export default function Team() {
@@ -210,11 +220,7 @@ export default function Team() {
                         alt={member.name}
                         onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
                         draggable={false} // 드래그 방지 (추가 추천)
-                        className={
-                          member.id === "jyh"
-                            ? "w-44 h-56 object-cover rounded bg-white" // 정영호님만 크게
-                            : "w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white" // 나머지 카드 그대로
-                        }
+                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white" 
                       />
                     </div>
                   </div>
@@ -262,6 +268,7 @@ export default function Team() {
                       alt={member.name}
                       onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
                       draggable={false} // 드래그 방지 (추가 추천)
+                      onTouchStart={(e) => e.preventDefault()} 
                       className="w-40 h-48 object-contain rounded"
                       style={{ backgroundColor: "transparent" }}
                     />
@@ -359,6 +366,7 @@ export default function Team() {
                   alt={selectedMember.name}
                   onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
                   draggable={false} // 드래그 방지 (추가 추천)
+                  onTouchStart={(e) => e.preventDefault()} 
                   className="w-full h-56 object-contain rounded bg-white"
                 />
               </div>
