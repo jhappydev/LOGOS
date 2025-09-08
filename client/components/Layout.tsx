@@ -33,8 +33,9 @@ export default function Layout({
     <div className="min-h-screen bg-white pb-16 lg:pb-0">
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow-md" : "bg-transparent"
-          }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
       >
         <div className="container mx-auto px-4 py-3 md:py-6 flex items-center justify-between mb-30">
           {/* Mobile Menu Button - Left */}
@@ -61,12 +62,14 @@ export default function Layout({
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fb3b53f52231b49298967686d64413891"
               alt="세무법인 로고스 로고"
-              className={`w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain transition-all duration-300 ${isScrolled ? "" : "brightness-0 invert"
-                }`}
+              className={`w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain transition-all duration-300 ${
+                isScrolled ? "" : "brightness-0 invert"
+              }`}
             />
             <span
-              className={`ml-3 text-lg md:text-xl lg:text-2xl font-bold ${isScrolled ? "text-[#345A9E]" : "text-white"
-                }`}
+              className={`ml-3 text-lg md:text-xl lg:text-2xl font-bold ${
+                isScrolled ? "text-[#345A9E]" : "text-white"
+              }`}
             >
               세무법인 로고스
             </span>
@@ -76,37 +79,41 @@ export default function Layout({
           <nav className="hidden lg:flex items-center space-x-8 order-3">
             <Link
               to="/greeting"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
-                ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                : "text-white hover:text-blue-200"
-                }`}
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
               인사말
             </Link>
             <Link
               to="/team"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
-                ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                : "text-white hover:text-blue-200"
-                }`}
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
-              임원진 소개
+              주요 구성원 소개
             </Link>
             <Link
               to="/services"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
-                ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                : "text-white hover:text-blue-200"
-                }`}
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
               담당 업무
             </Link>
             <Link
               to="/directions"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
-                ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                : "text-white hover:text-blue-200"
-                }`}
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
               오시는 길
             </Link>
@@ -118,8 +125,9 @@ export default function Layout({
 
         {/* Mobile Slide Menu */}
         <div
-          className={`lg:hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+          className={`lg:hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
         >
           <div className="p-4 border-b">
             <div className="flex items-center justify-between">
@@ -141,37 +149,41 @@ export default function Layout({
           <nav className="hidden lg:flex items-center space-x-8 order-3">
             <Link
               to="/greeting"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
-                ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                : "text-white hover:text-blue-200"
-                }`}
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
               인사말
             </Link>
             <Link
               to="/team"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
-                ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                : "text-white hover:text-blue-200"
-                }`}
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
-              임원진 소개
+              주요 구성원 소개
             </Link>
             <Link
               to="/services"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
-                ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                : "text-white hover:text-blue-200"
-                }`}
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
               담당 업무
             </Link>
             <Link
               to="/directions"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${isScrolled
-                ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                : "text-white hover:text-blue-200"
-                }`}
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
             >
               오시는 길
             </Link>
@@ -195,7 +207,7 @@ export default function Layout({
                   className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  임원진 소개
+                  주요 구성원 소개
                 </Link>
               </li>
               <li>
@@ -242,10 +254,11 @@ export default function Layout({
         <div className="container mx-auto px-4 relative z-10">
           <div className={`${isHomepage ? "max-w-3xl" : "text-center"}`}>
             <h1
-              className={`font-bold text-white mb-4 md:mb-6 leading-tight text-center ${isHomepage
-                ? "text-3xl md:text-4xl lg:text-6xl"
-                : "text-2xl md:text-3xl lg:text-4xl"
-                }`}
+              className={`font-bold text-white mb-4 md:mb-6 leading-tight text-center ${
+                isHomepage
+                  ? "text-3xl md:text-4xl lg:text-6xl"
+                  : "text-2xl md:text-3xl lg:text-4xl"
+              }`}
             >
               {heroTitle}
             </h1>
