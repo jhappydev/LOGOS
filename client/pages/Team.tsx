@@ -52,24 +52,13 @@ const teamMembers: TeamMember[] = [
     ],
   },
   {
-    id: "yjw",
-    name: "윤 지 원",
-    position: "이 사",
-    email: " wontax25@gmail.com",
-    specialization: "법인세, 소득세, 부가세 분야 전문가",
-    image: "images/윤지원.jpeg",
-    career: [
-    ],
-  },
-  {
     id: "jyh",
     name: "정 영 호",
     position: "컨설팅",
     email: " ksjy0111@naver.com",
     specialization: "컨설팅, 조세 불복 전문",
     image: "images/정영호.jpeg",
-    career: ["고려대 법학과 졸업",
-    ],
+    career: ["고려대 법학과 졸업"],
   },
 ];
 
@@ -170,11 +159,11 @@ export default function Team() {
                     </div>
                     <div className="flex-shrink-0">
                       <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
-                      onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
-                      draggable={false} // 드래그 방지 (추가 추천)
+                        src={member.image}
+                        alt={member.name}
+                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
+                        onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
+                        draggable={false} // 드래그 방지 (추가 추천)
                       />
                     </div>
                   </div>
@@ -219,7 +208,7 @@ export default function Team() {
                         alt={member.name}
                         onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
                         draggable={false} // 드래그 방지 (추가 추천)
-                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white" 
+                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
                       />
                     </div>
                   </div>
@@ -267,7 +256,7 @@ export default function Team() {
                       alt={member.name}
                       onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
                       draggable={false} // 드래그 방지 (추가 추천)
-                      onTouchStart={(e) => e.preventDefault()} 
+                      onTouchStart={(e) => e.preventDefault()}
                       className="w-40 h-48 object-contain rounded"
                       style={{ backgroundColor: "transparent" }}
                     />
@@ -365,7 +354,7 @@ export default function Team() {
                   alt={selectedMember.name}
                   onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
                   draggable={false} // 드래그 방지 (추가 추천)
-                  onTouchStart={(e) => e.preventDefault()} 
+                  onTouchStart={(e) => e.preventDefault()}
                   className="w-full h-56 object-contain rounded bg-white"
                 />
               </div>
@@ -383,11 +372,15 @@ export default function Team() {
                 <h2 className="text-xl font-bold text-gray-900 mb-1">
                   {selectedMember.name}
                 </h2>
-                <p className="text-lg text-gray-600">{selectedMember.position}</p>
+                <p className="text-lg text-gray-600">
+                  {selectedMember.position}
+                </p>
               </div>
 
               <div className="px-6 pb-6">
-                <h3 className="font-bold text-lg text-gray-900 mb-4">경력사항</h3>
+                <h3 className="font-bold text-lg text-gray-900 mb-4">
+                  경력사항
+                </h3>
                 <div className="space-y-2">
                   {selectedMember.career.map((item, index) => (
                     <p
