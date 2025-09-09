@@ -65,7 +65,7 @@ const teamMembers: TeamMember[] = [
     id: "jyh",
     name: "정 영 호",
     position: "컨설팅",
-    email: " yhfor0505@naver.com",
+    email: " ksjy0111@naver.com",
     specialization: "컨설팅, 조세 불복 전문",
     image: "images/정영호.jpeg",
     career: ["고려대 법학과 졸업",
