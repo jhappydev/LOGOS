@@ -54,7 +54,7 @@ const teamMembers: TeamMember[] = [
   {
     id: "jyh",
     name: "정 영 호",
-    position: "컨설팅",
+    position: "컨설턴트",
     email: " ksjy0111@naver.com",
     specialization: "컨설팅, 조세 불복 전문",
     image: "images/정영호.jpeg",
