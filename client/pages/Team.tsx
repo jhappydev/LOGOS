@@ -39,8 +39,7 @@ const teamMembers: TeamMember[] = [
     position: "경영 컨설팅 연구소장",
     email: "joohan3183@naver.com",
     specialization: "기업 컨설팅, M&A 분야 전문가",
-    image:
-      "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
+    image: "이미지 준비중", // 사진 없음
     career: [
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
@@ -118,6 +117,37 @@ export default function Team() {
     }
   }, [selectedMember]);
 
+  // 공통 이미지 박스 (없으면 회색 박스 + 텍스트)
+  const renderImage = (member: TeamMember, size = "card") => {
+    const baseClass =
+      size === "modal-desktop"
+        ? "w-56 h-72"
+        : size === "modal-mobile"
+          ? "w-full h-56"
+          : "w-32 h-40 lg:w-40 lg:h-52";
+
+    if (member.image === "이미지 준비중") {
+      return (
+        <div
+          className={`${baseClass} flex items-center justify-center rounded bg-gray-200 text-gray-500 text-sm`}
+        >
+          이미지 준비중
+        </div>
+      );
+    }
+
+    return (
+      <img
+        src={member.image}
+        alt={member.name}
+        onContextMenu={(e) => e.preventDefault()}
+        draggable={false}
+        onTouchStart={(e) => e.preventDefault()}
+        className={`${baseClass} object-contain rounded bg-white`}
+      />
+    );
+  };
+
   return (
     <Layout heroTitle="주요 구성원 소개">
       <section className="py-16 bg-gray-50 min-h-screen">
@@ -157,15 +187,7 @@ export default function Team() {
                         {member.specialization}
                       </p>
                     </div>
-                    <div className="flex-shrink-0">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
-                        onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
-                        draggable={false} // 드래그 방지 (추가 추천)
-                      />
-                    </div>
+                    <div className="flex-shrink-0">{renderImage(member)}</div>
                   </div>
                 ))}
               </div>
@@ -202,21 +224,13 @@ export default function Team() {
                         {member.specialization}
                       </p>
                     </div>
-                    <div className="flex-shrink-0">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
-                        draggable={false} // 드래그 방지 (추가 추천)
-                        className="w-32 h-40 lg:w-40 lg:h-52 object-contain rounded bg-white"
-                      />
-                    </div>
+                    <div className="flex-shrink-0">{renderImage(member)}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Mobile Layout - 글자 키움 */}
+            {/* Mobile Layout */}
             <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-6">
               {teamMembers.map((member) => (
                 <div
@@ -251,15 +265,7 @@ export default function Team() {
                   </p>
 
                   <div className="flex justify-center">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
-                      draggable={false} // 드래그 방지 (추가 추천)
-                      onTouchStart={(e) => e.preventDefault()}
-                      className="w-40 h-48 object-contain rounded"
-                      style={{ backgroundColor: "transparent" }}
-                    />
+                    {renderImage(member)}
                   </div>
                 </div>
               ))}
@@ -274,13 +280,7 @@ export default function Team() {
             <div className="hidden lg:flex fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 z-50">
               <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full max-h-[80vh] flex">
                 <div className="flex-shrink-0 w-72 p-8 border-r border-gray-200">
-                  <img
-                    src={selectedMember.image}
-                    alt={selectedMember.name}
-                    onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
-                    draggable={false} // 드래그 방지 (추가 추천)
-                    className="w-56 h-72 object-cover rounded mb-6 mx-auto"
-                  />
+                  {renderImage(selectedMember, "modal-desktop")}
                   <div className="space-y-2 text-base text-gray-600">
                     <div className="flex items-center gap-2">
                       <span>📧</span>
@@ -337,7 +337,7 @@ export default function Team() {
               </div>
             </div>
 
-            {/* Mobile Modal - 글자 키움 */}
+            {/* Mobile Modal */}
             <div className="lg:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] overflow-y-auto fixed inset-0 z-50 mx-auto my-8">
               <div className="flex justify-end p-4 pb-2">
                 <button
@@ -349,14 +349,7 @@ export default function Team() {
               </div>
 
               <div className="px-6 pb-4">
-                <img
-                  src={selectedMember.image}
-                  alt={selectedMember.name}
-                  onContextMenu={(e) => e.preventDefault()} // 우클릭 방지
-                  draggable={false} // 드래그 방지 (추가 추천)
-                  onTouchStart={(e) => e.preventDefault()}
-                  className="w-full h-56 object-contain rounded bg-white"
-                />
+                {renderImage(selectedMember, "modal-mobile")}
               </div>
 
               <div className="px-6 pb-4">
