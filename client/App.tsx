@@ -13,6 +13,7 @@ import Services from "./pages/Services";
 import Directions from "./pages/Directions";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import AdminTeam from "./pages/AdminTeam";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/services" element={<Services />} />
           <Route path="/directions" element={<Directions />} />
+          <Route path="/admin-team" element={<AdminTeam />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
