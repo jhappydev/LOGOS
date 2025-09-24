@@ -14,7 +14,7 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    id: "yoon",
+    id: "yyh",
     name: "윤 영 호",
     position: "대표세무사",
     email: "youngtax25@naver.com",
@@ -30,16 +30,16 @@ const teamMembers: TeamMember[] = [
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
-      "서울청 부과세과 팀장 등",
+      "서울청 부가세과 팀장 등",
     ],
   },
   {
-    id: "lee",
+    id: "lys",
     name: "이 영 섭",
     position: "경영 컨설팅 연구소장",
     email: "joohan3183@naver.com",
     specialization: "기업 컨설팅, M&A 분야 전문가",
-    image: "이미지 준비중", // 사진 없음
+    image: "이미지 준비중",
     career: [
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
@@ -58,6 +58,15 @@ const teamMembers: TeamMember[] = [
     specialization: "컨설팅, 조세 불복 전문",
     image: "images/정영호.jpeg",
     career: ["고려대 법학과 졸업"],
+  },
+  {
+    id: "byg",
+    name: "배 연 경",
+    position: "세 무 사",
+    email: "yoke258@naver.com",
+    specialization: "법인세, 부가가치세 전문",
+    image: "images/배연경.jpg",
+    career: ["세무법인 삼성"],
   },
 ];
 
