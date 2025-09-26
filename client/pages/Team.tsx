@@ -34,6 +34,16 @@ const teamMembers: TeamMember[] = [
     ],
   },
   {
+    id: "byg",
+    name: "배 연 경",
+    position: "세 무 사",
+    email: "yoke258@naver.com",
+    specialization: "법인세, 소득세, 양도세, 불복 전문",
+    image: "images/배연경.jpg",
+    career: ["숙명여대 경제학과 졸업",
+             "세무법인 삼성"],
+  },
+  {
     id: "lys",
     name: "이 영 섭",
     position: "경영 컨설팅 연구소장",
@@ -58,15 +68,6 @@ const teamMembers: TeamMember[] = [
     specialization: "컨설팅, 조세 불복 전문",
     image: "images/정영호.jpeg",
     career: ["고려대 법학과 졸업"],
-  },
-  {
-    id: "byg",
-    name: "배 연 경",
-    position: "세 무 사",
-    email: "yoke258@naver.com",
-    specialization: "법인세, 부가가치세 전문",
-    image: "images/배연경.jpg",
-    career: ["세무법인 삼성"],
   },
 ];
 
