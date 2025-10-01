@@ -39,7 +39,7 @@ const teamMembers: TeamMember[] = [
     position: "경영 컨설팅 연구소장",
     email: "joohan3183@naver.com",
     specialization: "기업 컨설팅, M&A 분야 전문가",
-    image: "이미지 준비중",
+    image: "images/이영섭.jpg",
     career: [
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
@@ -57,8 +57,7 @@ const teamMembers: TeamMember[] = [
     email: "yoke258@naver.com",
     specialization: "법인세, 소득세, 양도세, 불복 전문",
     image: "images/배연경.jpg",
-    career: ["숙명여대 경제학과 졸업",
-             "세무법인 삼성"],
+    career: ["숙명여대 경제학과 졸업", "세무법인 삼성"],
   },
   {
     id: "jyh",
@@ -153,7 +152,9 @@ export default function Team() {
         onContextMenu={(e) => e.preventDefault()}
         draggable={false}
         onTouchStart={(e) => e.preventDefault()}
-        className={`${baseClass} object-contain rounded bg-white`}
+        className={`${baseClass} object-contain bg-white rounded ${
+          member.id === "lys" ? "scale-[1.15] rounded-lg" : ""
+        }`}
       />
     );
   };
