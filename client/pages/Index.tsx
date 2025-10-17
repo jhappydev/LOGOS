@@ -40,14 +40,20 @@ export default function Index() {
           <div className="max-w-4xl mx-auto text-center">
             <div
               ref={keywordsRef}
-              className={`flex items-center justify-center mb-8 md:mb-16 transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-                }`}
+              className={`flex items-center justify-center mb-8 md:mb-16 transition-all duration-1000 ease-out ${
+                keywordsVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-12"
+              }`}
             >
               <div className="flex items-center space-x-2 md:space-x-6 lg:space-x-16">
                 {/* 최선 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                    }`}
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${
+                    keywordsVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                  }`}
                   style={{ transitionDelay: "200ms" }}
                 >
                   <div className="w-24 h-24 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
@@ -59,15 +65,21 @@ export default function Index() {
 
                 {/* Connecting Line */}
                 <div
-                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-                    }`}
+                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${
+                    keywordsVisible
+                      ? "opacity-100 scale-x-100"
+                      : "opacity-0 scale-x-0"
+                  }`}
                   style={{ transitionDelay: "400ms" }}
                 ></div>
 
                 {/* 최적 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                    }`}
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${
+                    keywordsVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                  }`}
                   style={{ transitionDelay: "600ms" }}
                 >
                   <div className="w-24 h-24 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
@@ -79,15 +91,21 @@ export default function Index() {
 
                 {/* Connecting Line */}
                 <div
-                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
-                    }`}
+                  className={`w-4 md:w-8 lg:w-20 h-0.5 bg-gray-400 transition-all duration-1000 ease-out ${
+                    keywordsVisible
+                      ? "opacity-100 scale-x-100"
+                      : "opacity-0 scale-x-0"
+                  }`}
                   style={{ transitionDelay: "800ms" }}
                 ></div>
 
                 {/* 최상 Circle */}
                 <div
-                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${keywordsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                    }`}
+                  className={`flex flex-col items-center transition-all duration-1000 ease-out ${
+                    keywordsVisible
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-8"
+                  }`}
                   style={{ transitionDelay: "1000ms" }}
                 >
                   <div className="w-24 h-24 md:w-28 md:h-28 lg:w-40 lg:h-40 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
@@ -125,7 +143,9 @@ export default function Index() {
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
               <div className="text-center">
                 <p className="text-xl md:text-lg lg:text-2xl text-gray-700 mb-6 md:mb-8">
-                  <span className="block">전문가 그룹이 고객의 상황에 맞는</span>
+                  <span className="block">
+                    전문가 그룹이 고객의 상황에 맞는
+                  </span>
                   <span className="block mt-2 break-keep md:mt-2 text-2xl md:text-2xl text-[#365B9F] font-bold">
                     개인별 최적화된 세무 솔루션
                   </span>
@@ -186,7 +206,6 @@ export default function Index() {
                   ))}
                 </p>
               </div>
-
             ))}
           </div>
 
