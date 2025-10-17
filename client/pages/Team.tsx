@@ -146,6 +146,7 @@ export default function Team() {
     }
 
     return (
+      //이영섭님
       <img
         src={member.image}
         alt={member.name}
