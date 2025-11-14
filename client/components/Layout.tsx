@@ -71,7 +71,7 @@ export default function Layout({
                 isScrolled ? "text-[#345A9E]" : "text-white"
               }`}
             >
-              세무법인 로고스
+              세무법인 로고스 강남지점
             </span>
           </Link>
 
@@ -151,14 +151,14 @@ export default function Layout({
         >
           <div className="p-4 border-b">
             <div className="flex items-center justify-between">
-              <div className="flex items-center">
+              <div className="flex items-center min-w-[120px]">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fc1a19d4d408c48e5a67fbd0c73679a92?format=webp&width=800"
                   alt="세무법인 로고스 로고"
                   className="w-16 h-6 object-contain"
                 />
-                <span className="ml-2 text-sm font-bold text-[#345A9E]">
-                  세무법인 로고스
+                <span className="ml-2 text-sm font-bold text-[#345A9E] whitespace-nowrap">
+                  세무법인 로고스 강남지점
                 </span>
               </div>
               <button onClick={() => setIsMenuOpen(false)} className="p-1">

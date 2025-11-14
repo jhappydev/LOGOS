@@ -156,7 +156,7 @@ export default function Index() {
               <div className="text-center">
                 <Link
                   to="/team"
-                  className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-lg md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors"
+                  className="inline-block bg-[#7BB0E3] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg text-xl md:text-2xl font-semibold hover:bg-[#5A9BD4] transition-colors"
                 >
                   주요 구성원 소개
                 </Link>
@@ -212,7 +212,7 @@ export default function Index() {
           <div className="text-center mt-10 md:mt-16">
             <Link
               to="/services"
-              className="inline-block bg-[#7BB0E3] text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg text-xl md:text-xl font-semibold hover:bg-[#5A9BD4] transition-colors overflow-hidden"
+              className="inline-block bg-[#7BB0E3] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg text-xl md:text-2xl font-semibold hover:bg-[#5A9BD4] transition-colors"
             >
               상세 업무 보기
             </Link>
