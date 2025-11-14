@@ -83,8 +83,6 @@ export default function Inquiry() {
     <Layout heroTitle="문의하기">
       <section className="py-10 sm:py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto bg-white shadow-md rounded-2xl p-8">
-          <h2 className="text-5xl font-bold mb-6 text-center">문의하기</h2>
-
           <form
             ref={formRef}
             onSubmit={sendEmail}
@@ -101,7 +99,6 @@ export default function Inquiry() {
                 name="company"
                 type="text"
                 className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-                placeholder="회사명 또는 단체명을 입력하세요"
               />
             </div>
 
@@ -113,7 +110,6 @@ export default function Inquiry() {
                 name="position"
                 type="text"
                 className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-                placeholder="부서 또는 직급을 입력하세요"
               />
             </div>
 
@@ -125,7 +121,6 @@ export default function Inquiry() {
                 name="name"
                 type="text"
                 className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-                placeholder="성함을 입력하세요"
               />
             </div>
 
@@ -137,7 +132,6 @@ export default function Inquiry() {
                 name="email"
                 type="email"
                 className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-                placeholder="example@email.com"
               />
             </div>
 
@@ -149,7 +143,6 @@ export default function Inquiry() {
                 name="phone"
                 type="tel"
                 className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-                placeholder="010-1234-5678"
               />
             </div>
 
@@ -159,7 +152,7 @@ export default function Inquiry() {
               </label>
               <textarea
                 name="message"
-                className="w-full border p-4 rounded placeholder-gray-800 h-40 resize-none text-xl"
+                className="w-full border p-4 rounded placeholder-gray-500 h-40 resize-none text-xl"
                 placeholder="문의 내용을 입력하세요"
               />
             </div>
@@ -180,7 +173,7 @@ export default function Inquiry() {
               </button>
             </div>
 
-            <p className="text-red-600 font-medium text-center pt-3 text-xl break-words">
+            <p className="text-blue-900 font-medium text-center pt-3 text-xl break-words">
               *첨부파일은 업로드가 불가능하오니 관련 파일은 회사 이메일로
               송부해주시기 바랍니다.
             </p>
@@ -192,7 +185,9 @@ export default function Inquiry() {
           <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
             <div className="bg-white rounded-xl shadow-lg p-8 max-w-sm text-center relative">
               <h3 className="text-3xl font-bold mb-4">문의 성공!</h3>
-              <p className="mb-6 text-2xl">메일이 성공적으로 전송되었습니다.</p>
+              <p className="mb-6 text-2xl">
+                문의하신 내용이 정상적으로 전송되었습니다.
+              </p>
               <button
                 onClick={() => setSuccessModal(false)}
                 className="bg-[#7BB0E3] text-white px-6 py-2 rounded hover:bg-[#5A9BD4]"

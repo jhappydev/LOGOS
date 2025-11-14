@@ -56,7 +56,7 @@ export default function Helper() {
       <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           {/* 세무 신고·납부 바로가기 */}
-          <h2 className="text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">
             세무 신고·납부 바로가기
           </h2>
           <div className="space-y-6">
@@ -66,11 +66,14 @@ export default function Helper() {
                 className="border-b pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between"
               >
                 <div>
-                  <p className="text-3xl font-semibold text-gray-800">
+                  <h3 className="font-bold text-xl lg:text-2xl text-gray-800">
                     {item.title}
-                  </p>
+                  </h3>
+
                   {item.guide && (
-                    <p className="text-xl text-black-500 mt-1">{item.guide}</p>
+                    <p className="text-base md:text-lg lg:text-xl text-black mt-2 mb-1 break-keep">
+                      {item.guide}
+                    </p>
                   )}
                 </div>
                 <a
@@ -94,7 +97,7 @@ export default function Helper() {
           </div>
 
           {/* 세무 정보 바로가기 */}
-          <h2 className="text-5xl font-bold text-gray-800 mt-12 mb-6">
+          <h2 className="text-3xl font-bold text-gray-800 mt-24 mb-6">
             세무 정보 바로가기
           </h2>
           <div className="space-y-4">
