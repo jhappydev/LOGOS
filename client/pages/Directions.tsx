@@ -17,7 +17,7 @@ export default function Directions() {
     // Initialize map when Naver Maps API is loaded
     const initMap = () => {
       const map = new window.naver.maps.Map(mapElement.current, {
-        center: new window.naver.maps.LatLng(37.4991, 127.0341), // 역삼역 근처 좌표
+        center: new window.naver.maps.LatLng(37.498537, 127.034435), // 역삼역 근처 좌표
         zoom: 17,
         mapTypeControl: true,
       });
