@@ -120,10 +120,10 @@ export default function Directions() {
                     (부봉빌딩) 4층
                   </p>
                   <p className="text-lg text-gray-600 mb-1">
-                    전화번호: 02-563-2505
+                    TEL: 02-563-2505
                   </p>
                   <p className="text-lg text-gray-600">FAX: 02-563-2506</p>
-                  <p className="text-lg text-gray-600">logostax25@naver.com</p>
+                  <p className="text-lg text-gray-600">EMAIL: logostax25@naver.com</p>
                 </div>
               </div>
 
