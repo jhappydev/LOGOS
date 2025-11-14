@@ -171,7 +171,7 @@ export default function Inquiry() {
               <button
                 type="submit"
                 disabled={isSending}
-                className="bg-[#7BB0E3] text-white font-semibold px-8 py-2 rounded hover:bg-[#7BB0E3] disabled:bg-gray-400"
+                className="bg-[#7BB0E3] text-white font-semibold px-8 py-2 rounded hover:bg-[#5A9BD4] disabled:bg-gray-400"
               >
                 {isSending ? "전송 중..." : "문의하기"}
               </button>
@@ -192,7 +192,7 @@ export default function Inquiry() {
               <p className="mb-6">메일이 성공적으로 전송되었습니다.</p>
               <button
                 onClick={() => setSuccessModal(false)}
-                className="bg-[#7BB0E3] text-white px-6 py-2 rounded hover:bg-blue-700"
+                className="bg-[#7BB0E3] text-white px-6 py-2 rounded hover:bg-[#5A9BD4]"
               >
                 확인
               </button>
