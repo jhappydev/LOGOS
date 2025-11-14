@@ -13,7 +13,8 @@ import Services from "./pages/Services";
 import Directions from "./pages/Directions";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-import AdminTeam from "./pages/AdminTeam";
+import Inquiry from "./pages/Inquiry";
+import Helper from "./pages/Helper";
 
 const queryClient = new QueryClient();
 
@@ -30,7 +31,8 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/services" element={<Services />} />
           <Route path="/directions" element={<Directions />} />
-          <Route path="/admin-team" element={<AdminTeam />} />
+          <Route path="/inquiry" element={<Inquiry />} />
+          <Route path="/helper" element={<Helper />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
