@@ -6,13 +6,12 @@ export default function Inquiry() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
+  const [successModal, setSuccessModal] = useState(false); // 모달 상태
 
   const SERVICE_ID = import.meta.env.VITE_EMAIL_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
   const PUBLIC_KEY = import.meta.env.VITE_EMAIL_PUBLIC_KEY;
 
-  // 📌 한국시간 포맷 YYYY.MM.DD HH:mm
   const getKoreanDateTime = () => {
     const now = new Date();
     const year = now.getFullYear();
@@ -38,9 +37,7 @@ export default function Inquiry() {
     });
 
     if (missing.length > 0) {
-      return `${missing
-        .map((f) => `「${f.label}」`)
-        .join(", ")} 항목을 입력해주세요.`;
+      return `${missing.map((f) => `「${f.label}」`).join(", ")} 항목을 입력해주세요.`;
     }
     return null;
   };
@@ -53,38 +50,30 @@ export default function Inquiry() {
     const validationError = validateForm(formData);
     if (validationError) {
       setError(validationError);
-      setSuccess(false);
       return;
     }
 
-    // 🔥 제출 직전에 hidden input값 업데이트
     const submittedTime = getKoreanDateTime();
     const timeInput = formRef.current.querySelector(
       "input[name='submitted_at']",
     ) as HTMLInputElement;
     if (timeInput) timeInput.value = submittedTime;
 
-    // 🔥 확인용 로그
-    console.log("📌 제출시간:", submittedTime);
-
     setIsSending(true);
     setError(null);
-    setSuccess(false);
 
     try {
-      const result = await emailjs.sendForm(
+      await emailjs.sendForm(
         SERVICE_ID,
         TEMPLATE_ID,
         formRef.current,
         PUBLIC_KEY,
       );
 
-      console.log("✅ EmailJS 응답:", result);
-
-      setSuccess(true);
       formRef.current.reset();
+      setSuccessModal(true); // 성공 모달 열기
     } catch (err) {
-      console.error("❌ 메일 전송 실패:", err);
+      console.error("메일 전송 실패:", err);
       setError("메일 전송에 실패했습니다. 잠시 후 다시 시도해주세요.");
     } finally {
       setIsSending(false);
@@ -103,7 +92,6 @@ export default function Inquiry() {
             className="space-y-4"
             encType="multipart/form-data"
           >
-            {/* 🔥 제출 시간(hidden, EmailJS가 읽음) */}
             <input type="hidden" name="submitted_at" />
 
             <div>
@@ -178,17 +166,12 @@ export default function Inquiry() {
             {error && (
               <p className="text-red-600 font-medium text-center">{error}</p>
             )}
-            {success && (
-              <p className="text-green-600 font-medium text-center">
-                메일이 성공적으로 전송되었습니다!
-              </p>
-            )}
 
             <div className="text-center pt-4">
               <button
                 type="submit"
                 disabled={isSending}
-                className="bg-blue-600 text-white font-semibold px-8 py-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
+                className="bg-[#7BB0E3] text-white font-semibold px-8 py-2 rounded hover:bg-[#7BB0E3] disabled:bg-gray-400"
               >
                 {isSending ? "전송 중..." : "문의하기"}
               </button>
@@ -196,10 +179,26 @@ export default function Inquiry() {
 
             <p className="text-red-600 font-medium text-center pt-2">
               *첨부파일은 업로드가 불가능하오니 관련 파일은 회사 이메일로
-              송부해주시기 바랍니다. <br />
+              송부해주시기 바랍니다.
             </p>
           </form>
         </div>
+
+        {/* 🔹 성공 모달 */}
+        {successModal && (
+          <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+            <div className="bg-white rounded-xl shadow-lg p-8 max-w-sm text-center relative">
+              <h3 className="text-xl font-bold mb-4">문의 성공!</h3>
+              <p className="mb-6">메일이 성공적으로 전송되었습니다.</p>
+              <button
+                onClick={() => setSuccessModal(false)}
+                className="bg-[#7BB0E3] text-white px-6 py-2 rounded hover:bg-blue-700"
+              >
+                확인
+              </button>
+            </div>
+          </div>
+        )}
       </section>
     </Layout>
   );
