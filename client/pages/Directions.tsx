@@ -123,6 +123,7 @@ export default function Directions() {
                     전화번호: 02-563-2505
                   </p>
                   <p className="text-lg text-gray-600">FAX: 02-563-2506</p>
+                  <p className="text-lg text-gray-600">logostax25@naver.com</p>
                 </div>
               </div>
 
@@ -181,40 +182,26 @@ export default function Directions() {
               <p className="block md:hidden text-sm text-amber-800">
                 <strong>주차 안내:</strong>
                 <br />
-                건물
-                내 주차장은
-                승용차
-                전용
-                기계식
-                주차장으로
+                건물 내 주차장은 승용차 전용 기계식 주차장으로
                 <br />
-                주차
-                공간이
-                제한되어
-                있습니다.
+                주차 공간이 제한되어 있습니다.
                 <br />
-                인근
-                공용주차장
-                또는
-                포스코
-                건물
-                유료주차장을
+                인근 공용주차장 또는 포스코 건물 유료주차장을
                 <br />
-                이용하시거나 대중교통
-                이용을
-                권장드립니다.
+                이용하시거나 대중교통 이용을 권장드립니다.
               </p>
 
               {/* PC 버전 */}
               <p className="hidden md:block text-sm text-amber-800 whitespace-normal">
                 <strong>주차 안내:</strong>
                 <br />
-                건물 내 주차장은 승용차 전용 기계식 주차장으로 주차 공간이 제한되어 있습니다.
+                건물 내 주차장은 승용차 전용 기계식 주차장으로 주차 공간이
+                제한되어 있습니다.
                 <br />
-                인근 공용주차장 또는 포스코 건물 유료주차장을 이용하시거나 대중교통 이용을 권장드립니다.
+                인근 공용주차장 또는 포스코 건물 유료주차장을 이용하시거나
+                대중교통 이용을 권장드립니다.
               </p>
             </div>
-
           </div>
         </div>
       </section>
