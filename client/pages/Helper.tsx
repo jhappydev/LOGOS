@@ -111,7 +111,7 @@ export default function Helper() {
                       mt-3 sm:mt-0
                       px-4 py-2 text-sm font-medium
                       bg-[#7BB0E3] text-white
-                      rounded-md hover:bg-blue-700 transition
+                      rounded-md hover:bg-[#5A9BD4] transition
                       w-1/3        // 🔥 모바일에서는 가로 1/3
                       sm:w-auto    // 🔥 PC에서는 원래대로 자동 크기
                       text-center  // 버튼 안 글자가 가운데 정렬되도록
