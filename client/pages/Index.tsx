@@ -158,7 +158,7 @@ export default function Index() {
                   to="/team"
                   className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-lg md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors"
                 >
-                  임원진 소개
+                  주요 구성원 소개
                 </Link>
               </div>
             </div>

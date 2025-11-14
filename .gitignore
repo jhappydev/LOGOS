@@ -23,5 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+# Config directory
 .config/
-!.env
+
+# Environment variables (보안상 매우 중요)
+.env
+.env.*
+

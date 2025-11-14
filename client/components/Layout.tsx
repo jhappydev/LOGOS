@@ -108,6 +108,16 @@ export default function Layout({
               담당 업무
             </Link>
             <Link
+              to="/helper"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
+            >
+              세무도우미
+            </Link>
+            <Link
               to="/directions"
               className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
                 isScrolled
@@ -116,6 +126,16 @@ export default function Layout({
               }`}
             >
               오시는 길
+            </Link>
+            <Link
+              to="/inquiry"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
+            >
+              문의하기
             </Link>
           </nav>
 
@@ -178,6 +198,16 @@ export default function Layout({
               담당 업무
             </Link>
             <Link
+              to="/helper"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
+            >
+              세무도우미
+            </Link>
+            <Link
               to="/directions"
               className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
                 isScrolled
@@ -186,6 +216,16 @@ export default function Layout({
               }`}
             >
               오시는 길
+            </Link>
+            <Link
+              to="/inquiry"
+              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
+                isScrolled
+                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
+                  : "text-white hover:text-blue-200"
+              }`}
+            >
+              문의하기
             </Link>
           </nav>
 
@@ -221,11 +261,29 @@ export default function Layout({
               </li>
               <li>
                 <Link
+                  to="/helper"
+                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  세무도우미
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/directions"
                   className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   오시는 길
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/inquiry"
+                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  문의하기
                 </Link>
               </li>
             </ul>
@@ -294,6 +352,9 @@ export default function Layout({
               주소 : 서울특별시 강남구 테헤란로20길 18 (부봉빌딩) 4층
             </p>
             <p className="text-sm md:text-base">이메일: logostax25@naver.com</p>
+            <p className="text-sm md:text-base">
+              Copyright (C) 2025 logostaxgn.com All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
