@@ -190,7 +190,7 @@ export default function Inquiry() {
               </p>
               <button
                 onClick={() => setSuccessModal(false)}
-                className="bg-[#7BB0E3] text-white px-10 py-4 rounded text-2xl hover:bg-blue-700"
+                className="bg-[#7BB0E3] text-white px-6 py-2 rounded hover:bg-[#5A9BD4]"
               >
                 확인
               </button>
