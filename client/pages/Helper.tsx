@@ -1,4 +1,6 @@
 import Layout from "../components/Layout";
+import { Check } from "lucide-react";
+import { BadgeCheck } from "lucide-react";
 
 export default function Helper() {
   const taxLinks = [
@@ -56,9 +58,11 @@ export default function Helper() {
       <section className="py-10 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           {/* 세무 신고·납부 바로가기 */}
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+            <Check className="mr-1 text-blue-600" size={32} strokeWidth={4} />
             세무 신고·납부 바로가기
           </h2>
+
           <div className="space-y-6">
             {taxLinks.map((item) => (
               <div
@@ -97,7 +101,8 @@ export default function Helper() {
           </div>
 
           {/* 세무 정보 바로가기 */}
-          <h2 className="text-3xl font-bold text-gray-800 mt-24 mb-6">
+          <h2 className="text-3xl font-bold text-gray-800 mt-24 flex items-center gap-3">
+            <Check className="mr-1 text-blue-600" size={32} strokeWidth={4} />
             세무 정보 바로가기
           </h2>
           <div className="space-y-4">
