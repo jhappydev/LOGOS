@@ -22,7 +22,6 @@ export default function Directions() {
         mapTypeControl: true,
       });
 
-      // Add marker for the office location
       const marker = new window.naver.maps.Marker({
         position: new window.naver.maps.LatLng(37.4991, 127.0341),
         map: map,
@@ -34,7 +33,6 @@ export default function Directions() {
         },
       });
 
-      // Add info window
       const infoWindow = new window.naver.maps.InfoWindow({
         content: `
           <div style="padding: 10px; min-width: 200px;">
@@ -48,7 +46,6 @@ export default function Directions() {
         `,
       });
 
-      // Show info window when marker is clicked
       window.naver.maps.Event.addListener(marker, "click", () => {
         if (infoWindow.getMap()) {
           infoWindow.close();
@@ -58,11 +55,9 @@ export default function Directions() {
       });
     };
 
-    // Check if Naver Maps API is already loaded
     if (window.naver && window.naver.maps) {
       initMap();
     } else {
-      // Fallback: show a simple placeholder if API is not available
       if (mapElement.current) {
         mapElement.current.innerHTML = `
           <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; background: #f3f4f6; border-radius: 8px;">
@@ -95,8 +90,8 @@ export default function Directions() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 mb-8">
-              <div>
-                <div className="bg-blue-50 p-6 rounded-lg mb-6">
+              <div className="flex flex-col gap-6">
+                <div className="bg-blue-50 p-6 rounded-lg">
                   <h3 className="text-2xl font-semibold text-gray-800 mb-3 flex items-center">
                     <Train className="w-6 h-6 mr-2 text-blue-600" />
                     지하철 이용 안내
@@ -110,7 +105,7 @@ export default function Directions() {
                   </p>
                 </div>
 
-                <div className="bg-gray-50 p-6 rounded-lg">
+                <div className="bg-gray-50 p-6 rounded-lg flex-1">
                   <h3 className="text-2xl font-semibold text-gray-800 mb-3 flex items-center">
                     <MapPin className="w-6 h-6 mr-2 text-blue-600" />
                     주소 및 연락처
@@ -127,11 +122,11 @@ export default function Directions() {
                 </div>
               </div>
 
-              <div>
+              <div className="flex flex-col">
                 <div
                   ref={mapElement}
-                  className="w-full h-64 lg:h-80 rounded-lg border border-gray-200"
-                  style={{ minHeight: "320px" }}
+                  className="w-full flex-1 rounded-lg border border-gray-200"
+                  style={{ minHeight: "280px" }}
                 />
               </div>
             </div>
