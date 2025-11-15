@@ -37,32 +37,16 @@ export default function Layout({
           isScrolled ? "bg-white shadow-md" : "bg-transparent"
         }`}
       >
-        <div className="container mx-auto px-4 py-3 md:py-6 flex items-center justify-between mb-30">
-          {/* Mobile Menu Button - Left */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden bg-transparent p-2 md:p-3 rounded order-1"
-          >
-            {isMenuOpen ? (
-              <X
-                className={`w-5 h-5 ${isScrolled ? "text-[#345A9E]" : "text-white"}`}
-              />
-            ) : (
-              <Menu
-                className={`w-5 h-5 ${isScrolled ? "text-[#345A9E]" : "text-white"}`}
-              />
-            )}
-          </button>
-
+        <div className="container mx-auto px-4 py-3 md:py-6 flex items-center justify-between">
           {/* Logo - Center on mobile, Left on desktop */}
           <Link
             to="/"
-            className="flex items-center font-medium order-2 lg:order-1 lg:pl-3 lg:mr-27"
+            className="flex items-center font-medium mx-auto lg:mx-0 lg:order-1"
           >
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fb3b53f52231b49298967686d64413891"
               alt="세무법인 로고스 로고"
-              className={`w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain transition-all duration-300 ${
+              className={`w-12 h-12 object-contain transition-all duration-300 ${
                 isScrolled ? "" : "brightness-0 invert"
               }`}
             />
@@ -75,83 +59,36 @@ export default function Layout({
             </span>
           </Link>
 
-          {/* Desktop Navigation Menu */}
-          <nav className="hidden lg:flex items-center space-x-8 order-3">
-            <Link
-              to="/greeting"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              인사말
-            </Link>
-            <Link
-              to="/team"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              주요 구성원 소개
-            </Link>
-            <Link
-              to="/services"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              담당 업무
-            </Link>
-            <Link
-              to="/helper"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              세무도우미
-            </Link>
-            <Link
-              to="/directions"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              오시는 길
-            </Link>
-            <Link
-              to="/inquiry"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              문의하기
-            </Link>
-          </nav>
-
-          {/* Spacer for mobile to keep logo centered */}
-          <div className="lg:hidden w-8 md:w-12 order-3"></div>
+          {/* Hamburger Button (PC & Mobile 공통) */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="bg-transparent p-2 md:p-3 rounded order-3"
+          >
+            {isMenuOpen ? (
+              <X
+                className={`w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 ${
+                  isScrolled ? "text-[#345A9E]" : "text-white"
+                }`}
+              />
+            ) : (
+              <Menu
+                className={`w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 ${
+                  isScrolled ? "text-[#345A9E]" : "text-white"
+                }`}
+              />
+            )}
+          </button>
         </div>
 
-        {/* Mobile Slide Menu */}
+        {/* Slide Menu - PC & Mobile 동일하게 사용 */}
         <div
-          className={`lg:hidden fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          className={`fixed inset-y-0 right-0 z-50 w-64 bg-white shadow-xl transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           <div className="p-4 border-b">
             <div className="flex items-center justify-between">
-              <div className="flex items-center min-w-[120px]">
+              <div className="flex items-center">
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fc1a19d4d408c48e5a67fbd0c73679a92?format=webp&width=800"
                   alt="세무법인 로고스 로고"
@@ -166,134 +103,36 @@ export default function Layout({
               </button>
             </div>
           </div>
-          <nav className="hidden lg:flex items-center space-x-8 order-3">
-            <Link
-              to="/greeting"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              인사말
-            </Link>
-            <Link
-              to="/team"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              주요 구성원 소개
-            </Link>
-            <Link
-              to="/services"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              담당 업무
-            </Link>
-            <Link
-              to="/helper"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              세무도우미
-            </Link>
-            <Link
-              to="/directions"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              오시는 길
-            </Link>
-            <Link
-              to="/inquiry"
-              className={`font-semibold text-lg lg:text-xl xl:text-2xl transition-colors ${
-                isScrolled
-                  ? "text-[#373F9C] hover:text-[#7BB0E3]"
-                  : "text-white hover:text-blue-200"
-              }`}
-            >
-              문의하기
-            </Link>
-          </nav>
 
-          {/* Mobile Slide Menu */}
+          {/* Slide Menu Links */}
           <nav className="p-4">
             <ul className="space-y-4">
-              <li>
-                <Link
-                  to="/greeting"
-                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  인사말
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/team"
-                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  주요 구성원 소개
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  담당 업무
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/helper"
-                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  세무도우미
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/directions"
-                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  오시는 길
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/inquiry"
-                  className="block text-lg lg:text-xl xl:text-2xl text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  문의하기
-                </Link>
-              </li>
+              {[
+                { label: "인사말", to: "/greeting" },
+                { label: "주요 구성원 소개", to: "/team" },
+                { label: "담당 업무", to: "/services" },
+                { label: "세무도우미", to: "/helper" },
+                { label: "오시는 길", to: "/directions" },
+                { label: "문의하기", to: "/inquiry" },
+              ].map((item) => (
+                <li key={item.to}>
+                  <Link
+                    to={item.to}
+                    className="block text-lg text-[#345A9E] hover:text-[#7BB0E3] transition-colors py-2"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
 
-        {/* Mobile Menu Overlay */}
+        {/* Overlay (메뉴 열렸을 때 화면 어둡게) */}
         {isMenuOpen && (
           <div
-            className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+            className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={() => setIsMenuOpen(false)}
           />
         )}
@@ -301,12 +140,13 @@ export default function Layout({
 
       {/* Hero Section */}
       <section
-        className={`relative ${isHomepage ? "h-screen" : "h-96"} bg-cover bg-center bg-no-repeat flex items-center`}
+        className={`relative ${
+          isHomepage ? "h-screen" : "h-96"
+        } bg-cover bg-center bg-no-repeat flex items-center`}
         style={{
           backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2F2c80f6ae184a4958b6c9fbd5fbe2c511')`,
         }}
       >
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-slate-800/50 to-slate-700/30"></div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -320,6 +160,7 @@ export default function Layout({
             >
               {heroTitle}
             </h1>
+
             {isHomepage && (
               <div className="text-white/90 text-xl md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8 text-center flex flex-row flex-wrap pl-8">
                 <span className="mr-auto">
@@ -333,10 +174,8 @@ export default function Layout({
         </div>
       </section>
 
-      {/* Page Content */}
       <main className="flex-grow">{children}</main>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-1 md:space-y-2">
@@ -359,7 +198,6 @@ export default function Layout({
         </div>
       </footer>
 
-      {/* Floating Consultation Buttons */}
       <FloatingButtons />
     </div>
   );
