@@ -173,7 +173,7 @@ export default function Inquiry() {
               </button>
             </div>
 
-            <p className="text-blue-900 font-medium text-center pt-3 text-xs break-words">
+            <p className="text-blue-900 font-medium text-center pt-3 text-sm break-words">
               *첨부파일은 업로드가 불가능하오니 관련 파일은 회사 이메일로
               송부해주시기 바랍니다.
             </p>
