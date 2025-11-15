@@ -57,7 +57,7 @@ const teamMembers: TeamMember[] = [
     email: "yoke258@naver.com",
     specialization: "법인세, 소득세, 양도세, 불복 전문",
     image: "images/배연경.jpg",
-    career: ["숙명여대 경제학과 졸업", "세무법인 삼성"],
+    career: ["숙명여대 경제학과 졸업", "세무법인 삼성 근무"],
   },
   {
     id: "jyh",

@@ -90,79 +90,80 @@ export default function Inquiry() {
             encType="multipart/form-data"
           >
             <input type="hidden" name="submitted_at" />
-
             <div>
-              <label className="block text-gray-700 mb-2 text-xl">
-                회사(단체)명 <span className="text-red-600 break-words">*</span>
-              </label>
+              {" "}
+              <label className="block text-gray-700 mb-1">
+                {" "}
+                회사(단체)명 <span className="text-red-500">*</span>{" "}
+              </label>{" "}
               <input
                 name="company"
                 type="text"
-                className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-              />
-            </div>
-
+                className="w-full border p-2 rounded placeholder-gray-800"
+              />{" "}
+            </div>{" "}
             <div>
-              <label className="block text-gray-700 mb-2 text-xl">
-                부서/직급
-              </label>
+              {" "}
+              <label className="block text-gray-700 mb-1">부서/직급</label>{" "}
               <input
                 name="position"
                 type="text"
-                className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-              />
-            </div>
-
+                className="w-full border p-2 rounded placeholder-gray-800"
+              />{" "}
+            </div>{" "}
             <div>
-              <label className="block text-gray-700 mb-2 text-xl">
-                성명 <span className="text-red-600 break-words">*</span>
-              </label>
+              {" "}
+              <label className="block text-gray-700 mb-1">
+                {" "}
+                성명 <span className="text-red-500">*</span>{" "}
+              </label>{" "}
               <input
                 name="name"
                 type="text"
-                className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-              />
-            </div>
-
+                className="w-full border p-2 rounded placeholder-gray-800"
+              />{" "}
+            </div>{" "}
             <div>
-              <label className="block text-gray-700 mb-2 text-xl">
-                이메일주소 <span className="text-red-600 break-words">*</span>
-              </label>
+              {" "}
+              <label className="block text-gray-700 mb-1">
+                {" "}
+                이메일주소 <span className="text-red-500">*</span>{" "}
+              </label>{" "}
               <input
                 name="email"
                 type="email"
-                className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-              />
-            </div>
-
+                className="w-full border p-2 rounded placeholder-gray-800"
+              />{" "}
+            </div>{" "}
             <div>
-              <label className="block text-gray-700 mb-2 text-xl">
-                전화번호 <span className="text-red-600 break-words">*</span>
-              </label>
+              {" "}
+              <label className="block text-gray-700 mb-1">
+                {" "}
+                전화번호 <span className="text-red-500">*</span>{" "}
+              </label>{" "}
               <input
                 name="phone"
                 type="tel"
-                className="w-full border p-4 rounded placeholder-gray-800 text-xl"
-              />
-            </div>
-
+                className="w-full border p-2 rounded placeholder-gray-800"
+              />{" "}
+            </div>{" "}
             <div>
-              <label className="block text-gray-700 mb-2 text-xl">
-                문의내용 <span className="text-red-600 break-words">*</span>
-              </label>
+              {" "}
+              <label className="block text-gray-700 mb-1">
+                {" "}
+                문의내용 <span className="text-red-500">*</span>{" "}
+              </label>{" "}
               <textarea
                 name="message"
-                className="w-full border p-4 rounded placeholder-gray-500 h-40 resize-none text-xl"
+                className="w-full border p-2 rounded placeholder-gray-500 h-32 resize-none"
                 placeholder="문의 내용을 입력하세요"
-              />
+              />{" "}
             </div>
-
             {error && (
               <p className="text-red-600 font-medium text-center text-xl break-words">
                 {error}
               </p>
             )}
-
             <div className="text-center pt-5">
               <button
                 type="submit"
@@ -172,8 +173,7 @@ export default function Inquiry() {
                 {isSending ? "전송 중..." : "문의하기"}
               </button>
             </div>
-
-            <p className="text-blue-900 font-medium text-center pt-3 text-xl break-words">
+            <p className="text-blue-900 font-medium text-center pt-3 text-sm break-words">
               *첨부파일은 업로드가 불가능하오니 관련 파일은 회사 이메일로
               송부해주시기 바랍니다.
             </p>
