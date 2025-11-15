@@ -173,7 +173,7 @@ export default function Inquiry() {
               </button>
             </div>
 
-            <p className="text-blue-900 font-medium text-center pt-3 text-xs break-words">
+            <p className="text-blue-900 font-medium text-center text-sm md:text-base break-words">
               *첨부파일은 업로드가 불가능하오니 관련 파일은 회사 이메일로
               송부해주시기 바랍니다.
             </p>
@@ -184,7 +184,7 @@ export default function Inquiry() {
         {successModal && (
           <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
             <div className="bg-white rounded-xl shadow-lg p-8 max-w-sm text-center relative">
-              <h3 className="text-3xl font-bold mb-4">문의 성공!</h3>
+              <h3 className="text-3xl font-bold mb-4">접수 완료</h3>
               <p className="mb-6 text-2xl">
                 문의하신 내용이 정상적으로 전송되었습니다.
               </p>
