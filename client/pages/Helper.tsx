@@ -101,7 +101,7 @@ export default function Helper() {
           </div>
 
           {/* 세무 정보 바로가기 */}
-          <h2 className="text-3xl font-bold text-gray-800 mt-24 flex items-center gap-3">
+          <h2 className="text-3xl font-bold text-gray-800 mt-24 mb-8 flex items-center gap-3">
             <Check className="mr-1 text-blue-600" size={32} strokeWidth={4} />
             세무 정보 바로가기
           </h2>
