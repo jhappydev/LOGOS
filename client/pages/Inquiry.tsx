@@ -173,10 +173,29 @@ export default function Inquiry() {
               </button>
             </div>
 
-            <p className="text-blue-900 font-medium text-center text-sm md:text-base break-words">
-              *첨부파일은 업로드가 불가능하오니 관련 파일은 회사 이메일로
-              송부해주시기 바랍니다.
-            </p>
+            <div className="text-center pt-3">
+              <span
+                onClick={() => {
+                  window.open("mailto:logostax25@naver.com", "_blank");
+                }}
+                className="cursor-pointer underline inline-flex items-center text-[1.1rem]"
+                style={{ color: "#4A539D" }}
+              >
+                <span>첨부파일 보내기</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#4A539D"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-[1.15rem] h-[1.15rem] ml-1"
+                >
+                  <path d="M21.44 11.05l-9.19 9.19a5.5 5.5 0 01-7.78-7.78l9.19-9.19a3.5 3.5 0 014.95 4.95l-9.2 9.19a1.5 1.5 0 01-2.12-2.12l8.49-8.48" />
+                </svg>
+              </span>
+            </div>
           </form>
         </div>
 
@@ -190,7 +209,7 @@ export default function Inquiry() {
               </p>
               <button
                 onClick={() => setSuccessModal(false)}
-                className="bg-[#7BB0E3] text-white px-6 py-2 rounded hover:bg-[#5A9BD4]"
+                className="bg-[#7BB0E3] text-white px-10 py-4 rounded text-2xl hover:bg-[#5A9BD4]"
               >
                 확인
               </button>
