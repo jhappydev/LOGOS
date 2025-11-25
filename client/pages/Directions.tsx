@@ -23,7 +23,7 @@ export default function Directions() {
       });
 
       const marker = new window.naver.maps.Marker({
-        position: new window.naver.maps.LatLng(37.4991, 127.0341),
+        position: new window.naver.maps.LatLng(37.498497, 127.034400),
         map: map,
         title: "세무법인 로고스 강남지점",
         icon: {
