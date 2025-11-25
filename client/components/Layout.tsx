@@ -162,12 +162,9 @@ export default function Layout({
             </h1>
 
             {isHomepage && (
-              <div className="text-white/90 text-xl md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8 text-center flex flex-row flex-wrap pl-8">
-                <span className="mr-auto">
-                  "맞춤 상담, 사후관리까지 책임지는
-                </span>
-                <br />
-                <span>&nbsp;믿을 수 있는 세무 동반자"</span>
+              <div className="text-white/90 text-xl md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8 text-center lg:text-left pl-8">
+                <span className="block">"맞춤 상담, 사후관리까지 책임지는</span>
+                <span className="block">&nbsp;믿을 수 있는 세무 동반자"</span>
               </div>
             )}
           </div>
