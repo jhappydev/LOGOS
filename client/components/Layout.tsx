@@ -2,6 +2,7 @@ import { useState, useEffect, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import FloatingButtons from "./FloatingButtons";
+import React from "react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -24,6 +25,7 @@ export default function Layout({
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
     };
+    console.log(React.version);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -114,6 +116,7 @@ export default function Layout({
                 { label: "세무도우미", to: "/helper" },
                 { label: "오시는 길", to: "/directions" },
                 { label: "문의하기", to: "/inquiry" },
+                // { label: "시설안내", to: "/facility" },
               ].map((item) => (
                 <li key={item.to}>
                   <Link
@@ -162,12 +165,9 @@ export default function Layout({
             </h1>
 
             {isHomepage && (
-              <div className="text-white/90 text-xl md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8 text-center flex flex-row flex-wrap pl-8">
-                <span className="mr-auto">
-                  "맞춤 상담, 사후관리까지 책임지는
-                </span>
-                <br />
-                <span>&nbsp;믿을 수 있는 세무 동반자"</span>
+              <div className="text-white/90 text-xl md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8 text-center lg:text-left pl-8">
+                <span className="block">"맞춤 상담, 사후관리까지 책임지는</span>
+                <span className="block">&nbsp;믿을 수 있는 세무 동반자"</span>
               </div>
             )}
           </div>

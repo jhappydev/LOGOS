@@ -60,13 +60,13 @@ const teamMembers: TeamMember[] = [
     career: ["숙명여대 경제학과 졸업", "세무법인 삼성 근무"],
   },
   {
-    id: "jyh",
-    name: "정 영 호",
-    position: "컨설턴트",
-    email: " ksjy0111@naver.com",
+    id: "msy",
+    name: "문 수 연",
+    position: "세 무 사",
+    email: "syeon.tax@gmail.com",
     specialization: "컨설팅, 조세 불복 전문",
-    image: "images/정영호.jpeg",
-    career: ["고려대 법학과 졸업"],
+    image: "images/문수연.jpeg",
+    career: ["경희대학교 회계세무학과 졸업", "한영회계법인 세무본부 근무"],
   },
 ];
 
