@@ -2,6 +2,7 @@ import { useState, useEffect, ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import FloatingButtons from "./FloatingButtons";
+import React from "react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -24,6 +25,7 @@ export default function Layout({
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 50);
     };
+    console.log(React.version);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -114,6 +116,7 @@ export default function Layout({
                 { label: "세무도우미", to: "/helper" },
                 { label: "오시는 길", to: "/directions" },
                 { label: "문의하기", to: "/inquiry" },
+                // { label: "시설안내", to: "/facility" },
               ].map((item) => (
                 <li key={item.to}>
                   <Link

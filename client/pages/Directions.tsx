@@ -17,13 +17,13 @@ export default function Directions() {
     // Initialize map when Naver Maps API is loaded
     const initMap = () => {
       const map = new window.naver.maps.Map(mapElement.current, {
-        center: new window.naver.maps.LatLng(37.498497, 127.034400), // 역삼역 근처 좌표
+        center: new window.naver.maps.LatLng(37.498497, 127.0344),
         zoom: 17,
         mapTypeControl: true,
       });
 
       const marker = new window.naver.maps.Marker({
-        position: new window.naver.maps.LatLng(37.498497, 127.034400),
+        position: new window.naver.maps.LatLng(37.498497, 127.0344),
         map: map,
         title: "세무법인 로고스 강남지점",
         icon: {

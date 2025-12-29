@@ -15,6 +15,7 @@ import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import Inquiry from "./pages/Inquiry";
 import Helper from "./pages/Helper";
+import Facility from "./pages/Facility";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/directions" element={<Directions />} />
           <Route path="/inquiry" element={<Inquiry />} />
           <Route path="/helper" element={<Helper />} />
+          <Route path="/facility" element={<Facility />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
