@@ -146,7 +146,6 @@ export default function Team() {
     }
 
     return (
-      //이영섭님
       <img
         src={member.image}
         alt={member.name}
@@ -154,7 +153,9 @@ export default function Team() {
         draggable={false}
         onTouchStart={(e) => e.preventDefault()}
         className={`${baseClass} object-contain bg-white rounded ${
-          member.id === "lys" ? "scale-[1.15] rounded-lg" : ""
+          member.id === "lys" && size === "card"
+            ? "scale-[1.15] rounded-lg"
+            : ""
         }`}
       />
     );
