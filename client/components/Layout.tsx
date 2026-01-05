@@ -164,13 +164,15 @@ export default function Layout({
               {heroTitle}
             </h1>
 
-            <div
-              className="text-white/90 text-xl md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8 
-                  text-center lg:text-left pl-0 lg:pl-8"
-            >
-              <span className="block">"맞춤 상담, 사후관리까지 책임지는</span>
-              <span className="block">&nbsp;믿을 수 있는 세무 동반자"</span>
-            </div>
+            {isHomepage && (
+              <div
+                className="text-white/90 text-xl md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8
+                     text-center lg:text-left pl-0 lg:pl-8"
+              >
+                <span className="block">"맞춤 상담, 사후관리까지 책임지는</span>
+                <span className="block">&nbsp;믿을 수 있는 세무 동반자"</span>
+              </div>
+            )}
           </div>
         </div>
       </section>
