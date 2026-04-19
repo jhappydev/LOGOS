@@ -50,24 +50,24 @@ const teamMembers: TeamMember[] = [
       "SK Chemical 지식경영시스템",
     ],
   },
-  {
-    id: "byg",
-    name: "배 연 경",
-    position: "세 무 사",
-    email: "yoke258@naver.com",
-    specialization: "법인세, 소득세, 양도세, 불복 전문",
-    image: "images/배연경.jpg",
-    career: ["숙명여대 경제학과 졸업", "세무법인 삼성 근무"],
-  },
-  {
-    id: "msy",
-    name: "문 수 연",
-    position: "세 무 사",
-    email: "syeon.tax@gmail.com",
-    specialization: "컨설팅, 조세 불복 전문",
-    image: "images/문수연.jpeg",
-    career: ["경희대학교 회계세무학과 졸업", "한영회계법인 세무본부 근무"],
-  },
+  // {
+  //   id: "byg",
+  //   name: "배 연 경",
+  //   position: "세 무 사",
+  //   email: "yoke258@naver.com",
+  //   specialization: "법인세, 소득세, 양도세, 불복 전문",
+  //   image: "images/배연경.jpg",
+  //   career: ["숙명여대 경제학과 졸업", "세무법인 삼성 근무"],
+  // },
+  // {
+  //   id: "msy",
+  //   name: "문 수 연",
+  //   position: "세 무 사",
+  //   email: "syeon.tax@gmail.com",
+  //   specialization: "컨설팅, 조세 불복 전문",
+  //   image: "images/문수연.jpeg",
+  //   career: ["경희대학교 회계세무학과 졸업", "한영회계법인 세무본부 근무"],
+  // },
 ];
 
 export default function Team() {
